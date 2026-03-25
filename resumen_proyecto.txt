@@ -1,0 +1,70 @@
+================================================================================
+           RESUMEN Y ESTRUCTURA DEL PROYECTO: REDES DE COMPUTADORAS
+================================================================================
+
+1. INFORMACIÓN GENERAL
+--------------------------------------------------------------------------------
+- Tema Principal: Redes de Computadoras.
+- Autor: OscarDQ.
+- Institución: Preparatoria 20-30.
+- Tecnología: HTML puro, CSS puro (Variables CSS, Flexbox, CSS Grid) y JavaScript básico (Vanilla JS).
+- Tipo de Proyecto: Sitio web estático multipágina con fin educativo/informativo.
+
+2. ARQUITECTURA DEL SITIO (PÁGINAS Y MENÚ)
+--------------------------------------------------------------------------------
+El proyecto cuenta con un sistema de navegación fijo y constante en todas las vistas (Sidebar).
+Las páginas que componen la estructura son:
+  * inicio.html — Definición y propósito de red, protocolo TCP/IP. Clasificación LAN/MAN/WAN/PAN.
+    Línea de tiempo histórica (ARPANET 1969 → TCP/IP 1974 → NSFNET 1986 → WWW 1991).
+    Internet Moderno: IoT, 5G, Cómputo en la Nube, Inteligencia Artificial.
+  * alcance.html — Enfocada en el alcance geográfico de las redes: LAN, MAN, WAN, PAN, etc. (SIN MODIFICAR).
+  * topologia.html — Topologías: Bus, Punto a Punto (P2P), Estrella, Anillo (Token Ring, FDDI),
+    Malla (completa/parcial, OSPF/BGP), Árbol (jerárquica), Mixta. Tabla comparativa completa.
+  * infraestructura.html — Medios guiados: Coaxial, UTP/STP (Cat5e→Cat8), Fibra Óptica (MMF/SMF).
+    Medios no guiados: Wi-Fi (802.11n/ac/ax), Microondas terrestres/satelitales, Satélites
+    GEO/MEO/LEO (Starlink, OneWeb), Bluetooth 5.x, Infrarrojo (IrDA).
+    Dispositivos (con capa OSI): Hub (C1), Repetidor (C1), Transceptor SFP (C1), Bridge (C2),
+    Switch con tabla CAM + VLANs (C2/3), Router con NAT/BGP/OSPF (C3), AP Wi-Fi, Gateway.
+    Tabla comparativa de dispositivos incluida.
+  * modelos.html — Encapsulamiento y PDUs (Segmento/Paquete/Trama/Bits). Modelo OSI 7 capas
+    (mnemotécnica FERTSPA, TCP vs UDP detallado). Modelo TCP/IP 4 capas (Three-Way Handshake,
+    IPv4 vs IPv6, ping/ICMP). Manejo de errores OSI vs TCP/IP. Cuadro comparativo avanzado.
+
+Cada página HTML tiene su propia hoja de estilos independiente además de la global (styles.css).
+
+3. ESTRUCTURA HTML (MAQUETA)
+--------------------------------------------------------------------------------
+Cada archivo HTML comparte una misma estructura semántica:
+  - <nav class="sidebar">: Menú lateral con logotipo, enlaces principales y firma (OscarDQ).
+  - <main class="content">: Contenedor principal.
+  - <header class="top-bar">: Cabecera superior sticky con título de la vista.
+  - <div class="progress-bar">: Barra de progreso de lectura dinámica (naranja).
+  - <div class="content-block"> / <section class="seccion">: Secciones con contenido real.
+  - <script>: JavaScript para actualizar el ancho de la barra de progreso según el scroll.
+
+4. DISEÑO DE INTERFAZ Y CSS GLOBAL (styles.css)
+--------------------------------------------------------------------------------
+  * Tema Oscuro (Dark Mode): Tonos grises/negros (BG #1e1e1e, Sidebar #252526).
+  * Color de Acento: Naranja/salmón (#f9826c) para títulos, activos y progreso.
+  * Tipografías Google Fonts: 'Inter' (cuerpo), 'Montserrat' (párrafos), 'Oswald' (impacto).
+  * Ocultamiento de barra de scroll para aspecto minimalista tipo "App".
+
+5. COMPONENTES VISUALES EN USO
+--------------------------------------------------------------------------------
+  - .info-box: Bloques de nota con borde naranja.
+  - .grid-cards / .card: Cuadrícula con hover, usada extensamente en todas las páginas.
+  - .timeline / .timeline-item: Línea de tiempo vertical (inicio.html).
+  - .ui-list: Listas con viñetas naranja (▹).
+  - Tablas HTML comparativas: topologia.html, infraestructura.html, modelos.html.
+
+6. ESTADO ACTUAL (TODO LIST)
+--------------------------------------------------------------------------------
+[x] 1. Rellenar contenido: inicio, topologia, infraestructura y modelos tienen contenido real del temario.
+[x] 2. Poblar componentes: info-box, grid-cards, timeline, ui-list y tablas usados en todas las páginas.
+[ ] 3. Añadir Ilustraciones: Colocar gráficas/esquemas en .media-container (pendiente).
+[ ] 4. Revisar Responsividad: Sidebar de 200px fijos, requeriría @media queries para móviles.
+
+---
+DOCUMENTO ACTUALIZADO: 2026-03-25.
+Refleja el estado tras el relleno de contenido educativo en todas las páginas HTML
+(excepto alcance.html que se conservó intacta por instrucción del autor).

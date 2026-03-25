@@ -1,0 +1,140 @@
+TIPOS DE REDES POR ALCANCE: PAN, LAN, MAN Y WAN
+=================================================
+
+INTRODUCCIÓN
+------------
+
+Una de las formas más comunes de clasificar las redes informáticas es según su alcance geográfico, es decir, la distancia física que pueden cubrir para interconectar dispositivos. Esta clasificación es fundamental para entender cómo se diseñan, administran y utilizan las redes en distintos entornos, desde el bolsillo de una persona hasta los océanos del planeta. Los cuatro tipos principales por alcance son: PAN (Red de Área Personal), LAN (Red de Área Local), MAN (Red de Área Metropolitana) y WAN (Red de Área Amplia).
+
+
+1. PAN — RED DE ÁREA PERSONAL (Personal Area Network)
+------------------------------------------------------
+
+La PAN es el tipo de red de menor alcance que existe. Su cobertura se limita al espacio inmediato de una sola persona, generalmente en un radio de entre 1 y 10 metros. El concepto de PAN surge con la proliferación de dispositivos personales portátiles como teléfonos inteligentes, tabletas, audífonos inalámbricos, relojes inteligentes y laptops.
+
+El propósito de una PAN es permitir que los dispositivos de un solo usuario se comuniquen entre sí de manera rápida y sin necesidad de infraestructura de red compleja. Por ejemplo, cuando conectas tus audífonos Bluetooth al teléfono, o cuando sincronizas tu smartwatch con tu smartphone, estás haciendo uso de una PAN.
+
+Las tecnologías más comunes utilizadas en este tipo de red son:
+
+  - Bluetooth: El protocolo más popular para PAN. Permite transferencia de datos a corta distancia con bajo consumo de energía. Se usa en audífonos, teclados, ratones, bocinas y wearables.
+  - Infrarrojo (IrDA): Tecnología más antigua que requiere línea de visión directa entre dispositivos. Hoy en día prácticamente en desuso.
+  - Zigbee y Z-Wave: Protocolos usados principalmente en dispositivos de domótica y automatización del hogar.
+  - USB (Universal Serial Bus): Aunque es una conexión física y no inalámbrica, técnicamente también puede considerarse parte de una PAN cuando conecta dispositivos personales entre sí.
+
+Las PAN pueden ser tanto cableadas como inalámbricas (WPAN — Wireless Personal Area Network), siendo las inalámbricas las más comunes actualmente gracias al auge de los dispositivos wearables y el Internet de las Cosas (IoT) personal.
+
+Ventajas de la PAN:
+  - Muy fácil de configurar.
+  - No requiere infraestructura adicional.
+  - Bajo consumo energético.
+  - Alta privacidad al ser de uso exclusivamente personal.
+
+Limitaciones:
+  - Alcance geográfico muy reducido.
+  - Velocidades de transferencia generalmente menores comparadas con LAN.
+  - No apta para compartir recursos entre múltiples usuarios simultáneamente.
+
+
+2. LAN — RED DE ÁREA LOCAL (Local Area Network)
+------------------------------------------------
+
+La LAN es, sin duda, el tipo de red más utilizado en el mundo empresarial, educativo y doméstico. Su alcance abarca desde una habitación hasta un conjunto de edificios cercanos, cubriendo distancias que van desde unos pocos metros hasta aproximadamente 1 o 2 kilómetros. Es la red que conecta las computadoras dentro de una oficina, una escuela, un hospital, una fábrica o un hogar.
+
+Las LAN permiten que múltiples usuarios y dispositivos compartan recursos de manera eficiente: impresoras, servidores de archivos, conexión a internet, bases de datos internas, entre otros. Al estar limitadas a un área geográfica pequeña, las LAN pueden alcanzar velocidades de transferencia muy elevadas, actualmente de hasta 10 Gbps en redes modernas con tecnología Ethernet de alta velocidad.
+
+Las tecnologías más utilizadas en LAN son:
+
+  - Ethernet (IEEE 802.3): Es el estándar dominante en redes LAN cableadas. Utiliza cables de par trenzado (UTP/STP) o fibra óptica para conectar dispositivos a través de switches y routers.
+  - Wi-Fi (IEEE 802.11): Permite crear LAN inalámbricas (WLAN). Es la tecnología que utilizan los routers domésticos y los puntos de acceso en oficinas y espacios públicos. Los estándares más recientes (Wi-Fi 6 y Wi-Fi 6E) alcanzan velocidades teóricas de varios Gbps.
+
+Componentes típicos de una LAN:
+  - Switch: Dispositivo central que interconecta todos los equipos de la red local.
+  - Router: Conecta la LAN con otras redes o con Internet.
+  - Puntos de acceso (Access Points): Extienden la cobertura inalámbrica dentro del área local.
+  - Servidores: Equipos que proveen servicios y recursos a los demás dispositivos de la red.
+
+Ventajas de la LAN:
+  - Alta velocidad de transferencia de datos.
+  - Baja latencia en la comunicación entre dispositivos.
+  - Fácil administración y mantenimiento al estar en un espacio físico controlado.
+  - Compartición eficiente de recursos (impresoras, almacenamiento, internet).
+  - Alta seguridad, ya que el acceso físico a la red es controlable.
+
+Limitaciones:
+  - Alcance geográfico limitado.
+  - Requiere mantenimiento de infraestructura física (cableado, switches, etc.).
+  - El rendimiento puede degradarse si hay demasiados dispositivos conectados sin una planificación adecuada.
+
+
+3. MAN — RED DE ÁREA METROPOLITANA (Metropolitan Area Network)
+--------------------------------------------------------------
+
+La MAN ocupa un nivel intermedio entre la LAN y la WAN. Su alcance cubre una ciudad completa o una región metropolitana, pudiendo abarcar distancias de entre 5 y 50 kilómetros aproximadamente. Este tipo de red es ideal para interconectar múltiples sucursales de una misma empresa distribuidas en distintos puntos de una ciudad, o para proveer servicios de telecomunicaciones a una comunidad urbana.
+
+Un ejemplo clásico de MAN es la red de cable coaxial o fibra óptica que un proveedor de servicios de internet (ISP) despliega para conectar a los hogares y negocios de una ciudad. Otro ejemplo es la red que interconecta los campus universitarios distribuidos en diferentes partes de una ciudad, o la red de videovigilancia de una municipalidad.
+
+Tecnologías utilizadas en MAN:
+  - Fibra óptica: El medio más utilizado en MAN modernas por su alta velocidad y capacidad de cubrir largas distancias sin pérdida significativa de señal.
+  - WiMAX (IEEE 802.16): Tecnología de acceso inalámbrico de banda ancha diseñada específicamente para cubrir áreas metropolitanas sin necesidad de cableado físico.
+  - SONET/SDH: Estándares de transmisión óptica usados por operadores de telecomunicaciones para redes de alta capacidad.
+  - Metro Ethernet: Extensión de la tecnología Ethernet para cubrir distancias metropolitanas, ampliamente adoptada por proveedores de servicios.
+
+Ventajas de la MAN:
+  - Permite la interconexión de múltiples LAN en una misma ciudad.
+  - Velocidades elevadas gracias al uso de fibra óptica.
+  - Ideal para empresas con múltiples sedes dentro de una misma área urbana.
+  - Reduce la dependencia de líneas telefónicas convencionales para la interconexión.
+
+Limitaciones:
+  - Su implementación y mantenimiento requieren una inversión considerable.
+  - Generalmente, su administración recae en proveedores de servicios de telecomunicaciones, no en el usuario final.
+  - Más compleja de administrar que una LAN.
+  - La seguridad puede ser más difícil de garantizar al abarcar espacios públicos.
+
+
+4. WAN — RED DE ÁREA AMPLIA (Wide Area Network)
+------------------------------------------------
+
+La WAN es el tipo de red de mayor alcance geográfico. Puede cubrir países enteros, continentes o incluso abarcar todo el planeta. La WAN conecta redes LAN y MAN entre sí a través de grandes distancias, utilizando infraestructura de telecomunicaciones como cables submarinos de fibra óptica, satélites y enlaces de microondas.
+
+El ejemplo más grande e importante de una WAN es Internet, la red global que interconecta a miles de millones de personas y dispositivos alrededor del mundo. Sin embargo, también existen WAN privadas: grandes corporaciones multinacionales las utilizan para interconectar sus oficinas en distintos países, garantizando comunicación segura y eficiente entre todas sus sedes.
+
+Tecnologías clave en las WAN:
+  - MPLS (Multiprotocol Label Switching): Tecnología ampliamente utilizada por operadores para enrutar el tráfico de manera eficiente en redes WAN privadas.
+  - Cables submarinos de fibra óptica: La columna vertebral del Internet global. Decenas de cables submarinos cruzan los océanos del mundo, transportando la mayor parte del tráfico de datos internacional.
+  - Satélites de comunicación: Permiten conectividad en zonas remotas donde el tendido de cable es impracticable. Los satélites de órbita baja (LEO), como los de la constelación Starlink, están revolucionando el acceso a Internet en áreas rurales y remotas.
+  - SD-WAN (Software-Defined WAN): Tecnología moderna que permite gestionar y optimizar redes WAN a través de software, mejorando el rendimiento y reduciendo costos.
+  - VPN (Virtual Private Network): Permite crear conexiones seguras y cifradas sobre infraestructura pública de Internet, siendo muy usadas para conectar trabajadores remotos a redes corporativas.
+
+Ventajas de la WAN:
+  - Alcance geográfico ilimitado.
+  - Permite la comunicación y colaboración global entre organizaciones.
+  - Facilita el acceso remoto a recursos y servicios en cualquier parte del mundo.
+  - Es la base de servicios esenciales como Internet, correo electrónico y comercio electrónico.
+
+Limitaciones:
+  - Mayor latencia en comparación con LAN y MAN, especialmente en conexiones de larga distancia.
+  - Infraestructura costosa y compleja de implementar y mantener.
+  - Mayor exposición a amenazas de seguridad cibernética al atravesar redes públicas.
+  - Las velocidades pueden variar considerablemente dependiendo de la infraestructura disponible en cada región.
+
+
+COMPARATIVA GENERAL
+-------------------
+
+  Tipo  |  Alcance típico         |  Ejemplo común
+  ------+-------------------------+----------------------------------
+  PAN   |  1 - 10 metros          |  Bluetooth entre teléfono y audífonos
+  LAN   |  Hasta 1-2 km           |  Red de oficina o red doméstica Wi-Fi
+  MAN   |  5 - 50 km              |  Red de un ISP en una ciudad
+  WAN   |  Países / global        |  Internet
+
+
+CONCLUSIÓN
+----------
+
+Comprender los distintos tipos de redes por alcance es esencial para diseñar soluciones de conectividad adecuadas a cada necesidad. Cada tipo tiene sus propias características, tecnologías, ventajas y limitaciones. La PAN cubre nuestro entorno inmediato personal; la LAN nos conecta en espacios compartidos como oficinas y hogares; la MAN enlaza zonas urbanas completas; y la WAN teje la gran red global que hace posible el mundo hiperconectado en el que vivimos. En la práctica, estas redes no operan de forma aislada: se complementan y se interconectan constantemente, formando la infraestructura digital que sostiene a la sociedad moderna.
+
+=================================================
+Documento elaborado con fines educativos.
+Basado en el temario del pizarrón de clase.

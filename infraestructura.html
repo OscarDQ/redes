@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes de Computadoras | Infraestructura</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesinfraestructura.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@300;400;500&family=Oswald:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="sidebar-top">
+            <div class="logo">REDES<span>.</span></div>
+            <div class="nav-label">Fundamentos</div>
+            <ul class="nav-links">
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="alcance.html">Alcance PAN-WAN</a></li>
+            </ul>
+            <div class="nav-label">Tecnología</div>
+            <ul class="nav-links">
+                <li><a href="topologia.html">Topologías</a></li>
+                <li><a href="infraestructura.html" class="active">Infraestructura</a></li>
+                <li><a href="modelos.html">Modelo OSI</a></li>
+            </ul>
+        </div>
+        <div class="sidebar-firma">
+            <p class="text-secondary">OscarDQ</p>
+        </div>
+    </nav>
+
+    <main class="content">
+        <header class="top-bar">
+            <span class="page-title">Hardware de Red</span>
+        </header>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <h1 class="page-title-banner">Infraestructura Física</h1>
+        <div class="content-block">
+            <h2 class="tech-header">El Camino y los Directores del Tráfico</h2>
+            <p class="body-text">Para que una red funcione correctamente es indispensable definir por dónde viajarán los datos y qué dispositivos se encargarán de dirigir ese tráfico con precisión.</p>
+            <div class="info-box" style="border-left-color: #444; background: transparent; box-shadow: none; border: 1px solid var(--border);">
+                <p>Una configuración deficiente de cables puede generar cuellos de botella que degradan el rendimiento incluso de los equipos más avanzados.</p>
+            </div>
+        </div>
+
+        <div class="divider-thin"></div>
+
+        <h2 class="tech-header">1. Medios de Transmisión</h2>
+        
+        <div class="content-block">
+            <h3 class="tech-sub-header">Medios Guiados (Alámbricos)</h3>
+            <p class="body-text">Conductores físicos que proporcionan inmunidad contra interferencias del entorno y latencias consistentes. Son la columna vertebral de cualquier red corporativa.</p>
+
+            <h4 class="tech-item-title">Cable Coaxial</h4>
+            <p class="body-text">Compuesto por un conductor central de cobre rodeado de aislante dieléctrico y una malla metálica de blindaje. Su estructura concéntrica le otorga excelente resistencia a interferencias electromagnéticas.</p>
+            <ul class="ui-list">
+                <li>Velocidades de hasta 10 Mbps en redes antiguas (Ethernet 10BASE2 / 10BASE5).</li>
+                <li>Distancias de hasta 500 metros sin repetidores.</li>
+                <li>Uso actual: redes de televisión por cable (CATV) e Internet HFC.</li>
+            </ul>
+
+            <h4 class="tech-item-title">Par Trenzado — UTP y STP</h4>
+            <p class="body-text">El medio cableado más utilizado en redes LAN. Consiste en pares de hilos de cobre entrelazados en espiral para reducir la interferencia entre pares (diafonía). Existen dos variantes principales:</p>
+            <div class="grid-cards" style="margin-top: 16px;">
+                <div class="card-corporate">
+                    <h4>UTP (sin blindaje)</h4>
+                    <p class="text-secondary">Más económico y fácil de instalar. Suficiente para la mayoría de entornos de oficina. Conector RJ-45. Distancia máxima: 100 m por segmento.</p>
+                </div>
+                <div class="card-corporate">
+                    <h4>STP (con blindaje)</h4>
+                    <p class="text-secondary">Cada par envuelto en lámina metálica protectora. Mayor resistencia en entornos con alta interferencia (fábricas, hospitales). Más costoso y rígido.</p>
+                </div>
+            </div>
+            <div class="info-box" style="margin-top: 16px; border-left-color: #444; background: transparent; box-shadow: none; border: 1px solid var(--border);">
+                <p><strong>Categorías de UTP:</strong> Cat5e (hasta 1 Gbps) — Cat6 (hasta 10 Gbps a 55m) — Cat6A (hasta 10 Gbps a 100m) — Cat7 y Cat8 (para centros de datos de altísima velocidad).</p>
+            </div>
+
+            <h4 class="tech-item-title">Fibra Óptica</h4>
+            <p class="body-text">Transmite datos mediante pulsos de luz láser a través de filamentos de vidrio del grosor de un cabello humano. La señal viaja por reflexión total interna, sin degradarse en largas distancias.</p>
+            <div class="grid-cards" style="margin-top: 16px;">
+                <div class="card-corporate">
+                    <h4>Monomodo (SMF)</h4>
+                    <p class="text-secondary">Núcleo estrecho (8–10 micras). Transmite una sola señal con mínima dispersión. Ideal para largas distancias (cientos de km). Usada en redes WAN y enlaces troncales.</p>
+                </div>
+                <div class="card-corporate">
+                    <h4>Multimodo (MMF)</h4>
+                    <p class="text-secondary">Núcleo más ancho (50–62.5 micras). Permite múltiples rayos de luz simultáneos. Distancias cortas (hasta 2 km). Usada en redes LAN y centros de datos.</p>
+                </div>
+            </div>
+            <ul class="ui-list" style="margin-top: 12px;">
+                <li>Velocidades de transmisión de hasta varios Tbps.</li>
+                <li>Inmune a interferencias electromagnéticas.</li>
+                <li>Prácticamente imposible de interceptar sin cortar físicamente la fibra.</li>
+            </ul>
+        </div>
+
+        <div class="content-block">
+            <h3 class="tech-sub-header">Medios No Guiados (Inalámbricos)</h3>
+            <p class="body-text">Los medios no guiados transmiten datos mediante ondas electromagnéticas que se propagan libremente por el aire o el espacio, sin necesidad de un conductor físico.</p>
+
+            <h4 class="tech-item-title">Wi-Fi (IEEE 802.11)</h4>
+            <p class="body-text">Tecnología inalámbrica más extendida para redes LAN. Opera en las bandas de 2.4 GHz, 5 GHz y 6 GHz (Wi-Fi 6E). Es el estándar IEEE 802.11 en sus distintas versiones.</p>
+            <div class="info-box" style="border-left-color: #444; background: transparent; box-shadow: none; border: 1px solid var(--border);">
+                <p><strong>Estándares principales:</strong> 802.11n (Wi-Fi 4) hasta 600 Mbps · 802.11ac (Wi-Fi 5) hasta varios Gbps · 802.11ax (Wi-Fi 6/6E) hasta 9.6 Gbps teóricos con mayor eficiencia en entornos congestionados. Alcance típico de 30–100 m en interiores.</p>
+            </div>
+
+            <h4 class="tech-item-title">Microondas</h4>
+            <p class="body-text">Ondas electromagnéticas de alta frecuencia (1–300 GHz) para transmitir datos a larga distancia en línea recta. Usadas tanto en enlaces terrestres como satelitales.</p>
+            <ul class="ui-list">
+                <li><strong>Terrestres:</strong> Antenas parabólicas en torres o edificios, con línea de visión directa. Cubren 30–80 km por enlace.</li>
+                <li><strong>Satelitales:</strong> La señal viaja desde tierra a satélites y de vuelta a la superficie.</li>
+                <li>Sensibles a la lluvia intensa (<em>rain fade</em>) en frecuencias altas. Requieren alineación precisa de antenas.</li>
+            </ul>
+
+            <h4 class="tech-item-title">Satélites de Comunicación</h4>
+            <p class="body-text">Orbitan la Tierra y retransmiten señales entre puntos del planeta. Son la solución para zonas sin infraestructura terrestre viable.</p>
+            <div class="grid-cards" style="margin-top: 16px;">
+                <div class="card-corporate">
+                    <h4>GEO (~36,000 km)</h4>
+                    <p class="text-secondary">Alta latencia (~600 ms), amplia cobertura. TV satelital y telecomunicaciones tradicionales.</p>
+                </div>
+                <div class="card-corporate">
+                    <h4>MEO (5,000–20,000 km)</h4>
+                    <p class="text-secondary">Latencia moderada. GPS y algunos sistemas de Internet.</p>
+                </div>
+                <div class="card-corporate">
+                    <h4>LEO (160–2,000 km)</h4>
+                    <p class="text-secondary">Baja latencia (~20–40 ms). Constelaciones modernas: Starlink, OneWeb, Amazon Kuiper.</p>
+                </div>
+            </div>
+
+            <h4 class="tech-item-title">Bluetooth</h4>
+            <p class="body-text">Tecnología inalámbrica de corto alcance (banda 2.4 GHz) para redes PAN personales. Bluetooth 5.x alcanza hasta 2 Mbps y 200 metros, con consumo energético muy bajo (BLE). Uso: audífonos, teclados, wearables, transferencia entre dispositivos.</p>
+
+            <h4 class="tech-item-title">Infrarrojo (IrDA)</h4>
+            <p class="body-text">Utiliza ondas de luz infrarroja para transmitir datos a muy corta distancia (generalmente menos de 1 metro). Requiere línea de visión directa entre emisor y receptor. Velocidades de hasta 4 Mbps. Prácticamente en desuso, reemplazado por Bluetooth. Uso actual: controles remotos de TV y algunos sensores industriales.</p>
+        </div>
+
+        <div class="divider-thick"></div>
+
+        <h2 class="tech-header">2. Directores de Tráfico (Hardware)</h2>
+        
+        <div class="content-block">
+            <h3 class="tech-sub-header">Hub (Concentrador) — Capa 1</h3>
+            <p class="body-text">El hub es el dispositivo de interconexión más básico y primitivo. Cuando recibe una señal por uno de sus puertos, la repite y envía por <em>todos</em> los demás puertos simultáneamente, sin importar el destinatario real. Todos los dispositivos comparten el mismo dominio de colisión, lo que degrada el rendimiento conforme crece la red.</p>
+            <div class="info-box" style="border-left-color: #444; background: transparent; box-shadow: none; border: 1px solid var(--border);">
+                <p><strong>Estado actual:</strong> Prácticamente obsoleto. Sustituido completamente por el switch en redes modernas. Solo se usa en entornos muy básicos o para análisis de redes (<em>sniffing</em>).</p>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3 class="tech-sub-header">Switch (Conmutador) — Capa 2 / 3</h3>
+            <p class="body-text">Es el dispositivo estrella de las redes LAN modernas. Aprende y memoriza las <strong>direcciones MAC</strong> de los equipos en su tabla CAM. Cuando recibe un paquete, lo envía <em>únicamente</em> al puerto del destinatario real, eliminando colisiones y haciendo la comunicación mucho más eficiente que el hub.</p>
+            <ul class="ui-list">
+                <li>Crea dominios de colisión independientes por cada puerto.</li>
+                <li>Disponible en versiones <strong>administrables</strong> (con VLANs, QoS, seguridad) y no administrables.</li>
+                <li>Modelos avanzados (Capa 3) pueden enrutar paquetes además de conmutar tramas.</li>
+            </ul>
+        </div>
+
+        <div class="content-block">
+            <h3 class="tech-sub-header">Router (Enrutador) — Capa 3</h3>
+            <p class="body-text">Dispositivo encargado de interconectar distintas redes y dirigir el tráfico entre ellas usando <strong>direcciones IP</strong>. Mantiene tablas de enrutamiento que describe las rutas disponibles. Puede aprender rutas de forma estática (manual) o dinámica (protocolos OSPF, BGP, RIP).</p>
+            <ul class="ui-list">
+                <li>Implementa <strong>NAT</strong> (Network Address Translation) para compartir una IP pública.</li>
+                <li>Segmenta dominios de broadcast, mejorando el rendimiento y la seguridad.</li>
+                <li>Selecciona la mejor ruta disponible de forma dinámica ante fallos de enlace.</li>
+            </ul>
+        </div>
+        
+        <div class="content-block">
+            <h3 class="tech-sub-header">Punto de Acceso Inalámbrico (AP)</h3>
+            <p class="body-text">Dispositivo que extiende una red cableada existente hacia el dominio inalámbrico (Wi-Fi). Permite la conexión de múltiples dispositivos móviles sin necesidad de cables físicos. Opera en la Capa 2 del modelo OSI y se conecta al switch principal mediante un cable UTP.</p>
+            <ul class="ui-list">
+                <li>Indispensable en redes empresariales con gran número de usuarios móviles.</li>
+                <li>Los AP modernos soportan los estándares Wi-Fi 6 y Wi-Fi 6E (802.11ax).</li>
+            </ul>
+        </div>
+
+        <div class="content-block">
+            <h3 class="tech-sub-header">Gateway (Puerta de Enlace)</h3>
+            <p class="body-text">Dispositivo o software que actúa como punto de entrada y salida entre dos redes con protocolos distintos. Traduce y convierte los formatos de datos para que puedan comunicarse redes heterogéneas. Es el elemento que permite que una red local acceda a Internet.</p>
+            <ul class="ui-list">
+                <li>En redes domésticas, el router generalmente cumple también la función de gateway.</li>
+                <li>En entornos empresariales, puede ser un servidor dedicado con reglas de conversión y seguridad.</li>
+            </ul>
+        </div>
+
+        <div class="content-block">
+            <h3 class="tech-sub-header">Bridge (Puente) — Capa 2</h3>
+            <p class="body-text">Interconecta dos segmentos de red del mismo tipo y filtra el tráfico entre ellos basándose en direcciones MAC. Divide la red en dos dominios de colisión independientes. Si el destinatario está en el mismo segmento que el emisor, bloquea el frame; si está al otro lado, lo reenvía. Funcionalmente reemplazado por los switches modernos.</p>
+        </div>
+
+        <div class="content-block">
+            <h3 class="tech-sub-header">Repetidor — Capa 1</h3>
+            <p class="body-text">Recibe una señal debilitada o distorsionada, la regenera completamente y la retransmite para que pueda recorrer distancias mayores. No analiza ni modifica el contenido, tampoco segmenta dominios de colisión. Uso actual: amplificadores de señal Wi-Fi y extensión de redes Ethernet de largo alcance.</p>
+        </div>
+
+        <div class="content-block">
+            <h3 class="tech-sub-header">Transceptor (Transceiver) — Capa 1</h3>
+            <p class="body-text">Dispositivo que puede tanto transmitir como recibir señales, combinando ambas funciones en una sola unidad. En redes profesionales son fundamentales para convertir señales entre diferentes tipos de medios de transmisión.</p>
+            <ul class="ui-list">
+                <li><strong>SFP (Small Form-factor Pluggable):</strong> Módulos intercambiables en switches y routers para conectar fibra óptica o cobre sin reemplazar el equipo completo.</li>
+                <li><strong>Transceptores ópticos:</strong> Convierten señales eléctricas en pulsos de luz para fibra óptica.</li>
+                <li><strong>Transceptores Wi-Fi/Bluetooth:</strong> Combinan transmisor y receptor de radiofrecuencia en una sola tarjeta.</li>
+            </ul>
+        </div>
+
+        <div class="divider-thick"></div>
+
+        <h2 class="tech-header">Tabla Comparativa de Dispositivos</h2>
+        <div class="content-block">
+            <div style="overflow-x: auto; margin: 20px 0;">
+                <table style="width: 100%; border-collapse: collapse; text-align: left; background-color: var(--bg-sidebar); border-radius: 8px; overflow: hidden; border: 1px solid var(--border); font-size: 0.9rem;">
+                    <thead>
+                        <tr style="background-color: var(--hover); color: var(--accent);">
+                            <th style="padding: 10px 14px; border-bottom: 2px solid var(--accent); border-right: 1px solid var(--border);">Dispositivo</th>
+                            <th style="padding: 10px 14px; border-bottom: 2px solid var(--accent); border-right: 1px solid var(--border);">Capa OSI</th>
+                            <th style="padding: 10px 14px; border-bottom: 2px solid var(--accent); border-right: 1px solid var(--border);">Inteligencia</th>
+                            <th style="padding: 10px 14px; border-bottom: 2px solid var(--accent);">Función Principal</th>
+                        </tr>
+                    </thead>
+                    <tbody style="font-family: 'Montserrat', sans-serif; color: #b0b0b0;">
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 10px 14px; font-weight: bold; color: #fff; border-right: 1px solid var(--border);">Hub</td>
+                            <td style="padding: 10px 14px; border-right: 1px solid var(--border);">Capa 1</td>
+                            <td style="padding: 10px 14px; color: #e57373; border-right: 1px solid var(--border);">Ninguna</td>
+                            <td style="padding: 10px 14px;">Repetir señal a todos los puertos</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 10px 14px; font-weight: bold; color: #fff; border-right: 1px solid var(--border);">Repetidor</td>
+                            <td style="padding: 10px 14px; border-right: 1px solid var(--border);">Capa 1</td>
+                            <td style="padding: 10px 14px; color: #e57373; border-right: 1px solid var(--border);">Ninguna</td>
+                            <td style="padding: 10px 14px;">Regenerar y amplificar la señal</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 10px 14px; font-weight: bold; color: #fff; border-right: 1px solid var(--border);">Transceptor</td>
+                            <td style="padding: 10px 14px; border-right: 1px solid var(--border);">Capa 1</td>
+                            <td style="padding: 10px 14px; color: #e57373; border-right: 1px solid var(--border);">Ninguna</td>
+                            <td style="padding: 10px 14px;">Convertir y transmitir/recibir señales</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 10px 14px; font-weight: bold; color: #fff; border-right: 1px solid var(--border);">Bridge</td>
+                            <td style="padding: 10px 14px; border-right: 1px solid var(--border);">Capa 2</td>
+                            <td style="padding: 10px 14px; color: #ffb74d; border-right: 1px solid var(--border);">Básica</td>
+                            <td style="padding: 10px 14px;">Filtrar tráfico entre segmentos por MAC</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 10px 14px; font-weight: bold; color: var(--accent); border-right: 1px solid var(--border);">Switch</td>
+                            <td style="padding: 10px 14px; border-right: 1px solid var(--border);">Capa 2–3</td>
+                            <td style="padding: 10px 14px; color: #66bb6a; border-right: 1px solid var(--border);">Alta</td>
+                            <td style="padding: 10px 14px;">Conmutar tramas por dirección MAC</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px 14px; font-weight: bold; color: var(--accent); border-right: 1px solid var(--border);">Router</td>
+                            <td style="padding: 10px 14px; border-right: 1px solid var(--border);">Capa 3</td>
+                            <td style="padding: 10px 14px; color: #66bb6a; border-right: 1px solid var(--border);">Muy alta</td>
+                            <td style="padding: 10px 14px;">Enrutar paquetes entre redes distintas por IP</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            document.getElementById('progressFill').style.width = progress + '%';
+        });
+    </script>
+
+</body>
+</html>

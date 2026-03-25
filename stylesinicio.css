@@ -1,0 +1,60 @@
+/* ── Timeline Images (inicio.html) ── */
+.timeline-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.timeline-row > p {
+    flex: 1;
+    min-width: 0;
+}
+
+.timeline-img-wrapper {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.timeline-img {
+    width: 140px;
+    height: 120px;
+    object-fit: contain;
+    background: linear-gradient(135deg, #1e1e24 0%, #2a2a32 100%);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.timeline-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.timeline-img-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+.timeline-img-group {
+    display: flex;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .timeline-row {
+        flex-direction: column;
+    }
+
+    .timeline-img {
+        width: 120px;
+        height: 100px;
+    }
+}

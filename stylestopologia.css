@@ -1,0 +1,47 @@
+/* ── Topology Two-Column Layout ── */
+.topology-row {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin: 16px 0 20px 0;
+}
+
+.topology-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.topology-img-wrapper {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topology-img {
+    width: 240px;
+    height: 200px;
+    object-fit: contain;
+    background: linear-gradient(135deg, #1e1e24 0%, #2a2a32 100%);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.topology-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 768px) {
+    .topology-row {
+        flex-direction: column;
+    }
+
+    .topology-img {
+        width: 220px;
+        height: 180px;
+    }
+}

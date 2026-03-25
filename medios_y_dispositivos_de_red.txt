@@ -1,0 +1,431 @@
+MEDIOS DE CONEXIÓN Y DISPOSITIVOS DE INTERCONEXIÓN EN REDES
+============================================================
+
+INTRODUCCIÓN
+------------
+
+Para que una red informática funcione, no basta con tener dispositivos que deseen comunicarse entre sí; también es necesario definir de qué manera se transmitirán los datos entre ellos. Esto involucra dos elementos fundamentales: los medios de conexión (el "camino" por donde viaja la información) y los dispositivos de interconexión (los "intermediarios" que dirigen, amplifican y gestionan el tráfico de datos). Comprender ambos elementos es esencial para diseñar redes eficientes, confiables y seguras.
+
+
+PARTE I: MEDIOS DE CONEXIÓN
+============================
+
+Los medios de conexión, también llamados medios de transmisión, son los canales físicos o inalámbricos a través de los cuales viajan los datos en forma de señales eléctricas, lumínicas o electromagnéticas. Se dividen en dos grandes categorías: medios guiados (cableados) y medios no guiados (inalámbricos).
+
+
+A) MEDIOS GUIADOS (ALÁMBRICOS)
+--------------------------------
+
+Los medios guiados son aquellos en los que la señal viaja a través de un conductor físico, ya sea un cable de cobre o fibra de vidrio. La señal está "guiada" y confinada dentro del medio, lo que generalmente garantiza mayor seguridad, estabilidad y velocidad de transmisión.
+
+
+1. CABLE COAXIAL
+----------------
+
+El cable coaxial fue uno de los primeros medios utilizados en redes informáticas y de televisión. Está compuesto por un conductor central de cobre rodeado por una capa de aislante dieléctrico, luego una malla metálica conductora que actúa como blindaje, y finalmente una cubierta exterior de plástico protector.
+
+Esta estructura concéntrica (de ahí el nombre "coaxial", que significa "mismo eje") le confiere excelentes propiedades de blindaje electromagnético, protegiéndolo de interferencias externas.
+
+Características:
+  - Conductor central de cobre para transportar la señal.
+  - Blindaje metálico que reduce interferencias electromagnéticas.
+  - Velocidades de hasta 10 Mbps en redes antiguas (Ethernet 10BASE2 y 10BASE5).
+  - Distancias de hasta 500 metros sin necesidad de repetidores.
+  - Dos tipos principales: cable fino (Thinnet) y cable grueso (Thicknet).
+
+Ventajas:
+  - Buen blindaje contra interferencias electromagnéticas.
+  - Mayor ancho de banda que el cable telefónico tradicional.
+  - Duradero y resistente mecánicamente.
+
+Desventajas:
+  - Más rígido y difícil de instalar que el par trenzado.
+  - Mayor costo que el UTP.
+  - En desuso en redes LAN modernas; persiste en televisión por cable e internet de banda ancha (DOCSIS).
+
+Uso actual: Redes de televisión por cable (CATV), conexiones de antenas, algunas instalaciones de Internet por cable (HFC).
+
+
+2. PAR TRENZADO — UTP y STP
+----------------------------
+
+El cable de par trenzado es el medio cableado más utilizado en redes LAN en la actualidad. Consiste en pares de hilos de cobre entrelazados en espiral entre sí. El trenzado reduce la interferencia electromagnética entre los propios pares del cable (diafonía o crosstalk) y la interferencia de fuentes externas.
+
+Existen dos variantes principales:
+
+UTP (Unshielded Twisted Pair — Par Trenzado No Blindado):
+  - No tiene blindaje metálico adicional.
+  - Es el más económico y fácil de instalar.
+  - Suficiente para la mayoría de entornos de oficina.
+  - Se conecta mediante conectores RJ-45.
+  - Categorías comunes: Cat5e (hasta 1 Gbps), Cat6 (hasta 10 Gbps a 55m), Cat6A (hasta 10 Gbps a 100m), Cat7 y Cat8 para aplicaciones de altísima velocidad.
+
+STP (Shielded Twisted Pair — Par Trenzado Blindado):
+  - Cada par o el conjunto de pares está envuelto en una lámina metálica protectora.
+  - Mayor protección contra interferencias electromagnéticas externas.
+  - Más costoso y rígido que el UTP.
+  - Ideal para entornos industriales con alta interferencia electromagnética (fábricas, hospitales con equipos de imagen).
+
+Ventajas generales del par trenzado:
+  - Económico y ampliamente disponible.
+  - Fácil de instalar y manejar.
+  - Compatible con la mayoría de equipos de red modernos.
+  - Suficiente para velocidades de hasta 40 Gbps en las categorías más avanzadas.
+
+Desventajas:
+  - Susceptible a interferencias en el caso del UTP.
+  - Distancia máxima recomendada de 100 metros por segmento sin repetidores.
+  - El STP es más caro y difícil de instalar correctamente.
+
+Uso típico: Redes LAN en oficinas, hogares, escuelas, hospitales y centros de datos.
+
+
+3. FIBRA ÓPTICA
+---------------
+
+La fibra óptica es el medio de transmisión más avanzado y de mayor rendimiento disponible actualmente. En lugar de señales eléctricas, transmite datos en forma de pulsos de luz a través de filamentos de vidrio o plástico extremadamente delgados (del grosor de un cabello humano). La luz viaja por el interior de la fibra mediante el principio de reflexión total interna, rebotando en las paredes del núcleo sin escapar.
+
+Tipos de fibra óptica:
+  - Monomodo (SMF): Núcleo muy estrecho (8-10 micras). Permite transmitir una sola señal de luz con mínima dispersión. Ideal para largas distancias (hasta cientos de kilómetros). Usada en redes WAN y enlaces troncales.
+  - Multimodo (MMF): Núcleo más ancho (50-62.5 micras). Permite múltiples rayos de luz simultáneos. Mayor dispersión, por lo que se usa en distancias cortas (hasta 2 km). Usada en redes LAN y centros de datos.
+
+Características:
+  - Velocidades de transmisión de hasta varios Tbps (terabits por segundo).
+  - Inmune a interferencias electromagnéticas.
+  - Muy baja atenuación de la señal: puede recorrer cientos de kilómetros sin repetidores.
+  - Altísima seguridad: prácticamente imposible de interceptar sin cortar físicamente la fibra.
+  - Muy ligera y delgada a pesar de su enorme capacidad.
+
+Ventajas:
+  - La mayor velocidad y ancho de banda de todos los medios cableados.
+  - Inmunidad total a interferencias eléctricas y electromagnéticas.
+  - Ideal para largas distancias sin degradación de señal.
+  - Alta seguridad de la transmisión.
+
+Desventajas:
+  - Costo de instalación más elevado que el cobre.
+  - Requiere herramientas y técnicos especializados para su instalación y empalme.
+  - Frágil ante dobleces bruscos o golpes físicos.
+  - Los transceptores ópticos (conversores de señal) añaden costo a cada extremo.
+
+Uso típico: Redes troncales de Internet, cables submarinos intercontinentales, redes metropolitanas, centros de datos, conexiones de fibra al hogar (FTTH).
+
+
+B) MEDIOS NO GUIADOS (INALÁMBRICOS)
+--------------------------------------
+
+Los medios no guiados son aquellos en los que la señal se propaga libremente por el aire o el espacio, sin necesidad de un conductor físico. Utilizan ondas electromagnéticas de distintas frecuencias para transmitir información.
+
+
+4. INFRARROJO
+-------------
+
+La comunicación por infrarrojo utiliza ondas de luz infrarroja (justo por debajo del espectro visible) para transmitir datos a muy corta distancia. Requiere línea de visión directa entre emisor y receptor, ya que la señal no puede atravesar obstáculos sólidos.
+
+Características:
+  - Rango de operación: generalmente menos de 1 metro, hasta un máximo de unos pocos metros.
+  - Requiere línea de visión directa (LOS — Line of Sight).
+  - Velocidades moderadas (hasta 4 Mbps en el estándar IrDA).
+  - No interfiere con señales de radio.
+
+Ventajas:
+  - Bajo costo de implementación.
+  - Sin interferencias con otras señales inalámbricas.
+  - Alta privacidad al tener alcance muy limitado.
+
+Desventajas:
+  - Alcance extremadamente corto.
+  - Obstáculos físicos bloquean completamente la señal.
+  - Prácticamente en desuso, reemplazado por Bluetooth.
+
+Uso típico: Controles remotos de TV, transferencia de datos entre PDAs antiguas, algunos sensores industriales.
+
+
+5. WI-FI (IEEE 802.11)
+-----------------------
+
+Wi-Fi es la tecnología inalámbrica más extendida para redes de área local. Utiliza ondas de radio en las bandas de frecuencia de 2.4 GHz, 5 GHz y 6 GHz (esta última en Wi-Fi 6E) para transmitir datos sin necesidad de cables. Es gestionada por el estándar IEEE 802.11 en sus distintas versiones.
+
+Estándares principales:
+  - 802.11b/g: Banda 2.4 GHz. Velocidades de hasta 54 Mbps. Mayor alcance pero más susceptible a interferencias.
+  - 802.11n (Wi-Fi 4): Bandas 2.4 y 5 GHz. Hasta 600 Mbps. Tecnología MIMO.
+  - 802.11ac (Wi-Fi 5): Banda 5 GHz. Hasta varios Gbps. MU-MIMO.
+  - 802.11ax (Wi-Fi 6/6E): Bandas 2.4, 5 y 6 GHz. Hasta 9.6 Gbps teóricos. Mayor eficiencia en entornos congestionados.
+
+Características:
+  - Alcance típico de 30-100 metros en interiores (más en exteriores).
+  - Ampliamente compatible con prácticamente todos los dispositivos modernos.
+  - Permite movilidad total dentro del área de cobertura.
+
+Ventajas:
+  - Movilidad y flexibilidad sin cables.
+  - Fácil de instalar y configurar.
+  - Compatible con miles de millones de dispositivos.
+  - Velocidades cada vez más cercanas al cable en versiones recientes.
+
+Desventajas:
+  - Susceptible a interferencias de otros dispositivos inalámbricos.
+  - La señal se degrada con paredes, distancia y obstáculos.
+  - Mayor vulnerabilidad a ataques de seguridad que las redes cableadas.
+  - El ancho de banda se comparte entre todos los usuarios conectados.
+
+Uso típico: Redes domésticas, oficinas, cafeterías, aeropuertos, universidades, dispositivos móviles.
+
+
+6. SATÉLITES DE COMUNICACIÓN
+-----------------------------
+
+Los satélites de comunicación orbitan la Tierra y actúan como repetidores en el espacio, recibiendo señales desde la superficie terrestre y retransmitiéndolas a otras ubicaciones del planeta. Son la solución de conectividad para zonas remotas donde ningún otro medio es viable.
+
+Tipos según órbita:
+  - GEO (Órbita Geoestacionaria, ~36,000 km): Alta latencia (~600 ms), amplia cobertura. Usados para TV satelital y telecomunicaciones tradicionales.
+  - MEO (Órbita Media, 5,000-20,000 km): Latencia moderada. Usados en GPS y algunos sistemas de Internet.
+  - LEO (Órbita Baja, 160-2,000 km): Baja latencia (~20-40 ms), alta velocidad. Usados por constelaciones modernas como Starlink, OneWeb y Amazon Kuiper.
+
+Ventajas:
+  - Cobertura global, incluyendo zonas rurales, oceánicas y polares.
+  - No requiere infraestructura terrestre de cableado.
+  - Ideal para comunicaciones en desastres naturales o zonas de difícil acceso.
+
+Desventajas:
+  - Alta latencia en satélites GEO (problemática para videojuegos y videollamadas).
+  - Costo elevado de los equipos terminales.
+  - Susceptible a condiciones climáticas adversas (lluvia intensa, tormentas).
+  - Ancho de banda compartido entre múltiples usuarios.
+
+Uso típico: Internet en zonas rurales y remotas, navegación marítima y aérea, comunicaciones militares, televisión satelital, GPS.
+
+
+7. MICROONDAS
+-------------
+
+Las microondas son ondas electromagnéticas de alta frecuencia (entre 1 GHz y 300 GHz) utilizadas para transmitir datos a larga distancia en línea recta. Se usan tanto en enlaces terrestres (entre antenas en torres) como en comunicaciones satelitales.
+
+Tipos:
+  - Microondas terrestres: Antenas parabólicas instaladas en torres o edificios altos, con línea de visión directa. Cubren distancias de 30 a 80 km por enlace.
+  - Microondas satelitales: Señales enviadas desde tierra a satélites y de vuelta a tierra.
+
+Características:
+  - Requieren línea de visión directa entre antenas.
+  - Velocidades de hasta varios Gbps en enlaces modernos.
+  - Muy utilizadas por operadores de telecomunicaciones.
+  - Sensibles a la lluvia intensa (efecto "rain fade") en frecuencias altas.
+
+Ventajas:
+  - No requiere tendido de cable en terrenos difíciles.
+  - Alta capacidad de transmisión.
+  - Cobertura de largas distancias con pocos saltos.
+
+Desventajas:
+  - Requiere línea de visión directa.
+  - Afectada por condiciones climáticas.
+  - Las antenas deben estar alineadas con precisión.
+
+Uso típico: Backhaul de operadores móviles (conexión entre torres celulares), enlaces punto a punto entre edificios, redes de telecomunicaciones troncales.
+
+
+8. BLUETOOTH
+------------
+
+Aunque no aparece en todos los esquemas de medios inalámbricos, el Bluetooth es una tecnología inalámbrica de corto alcance que utiliza la banda de 2.4 GHz para comunicación entre dispositivos personales. Es la base de las redes PAN inalámbricas.
+
+Características:
+  - Alcance de 1 a 100 metros según la clase del dispositivo.
+  - Versiones modernas (Bluetooth 5.x): hasta 2 Mbps de velocidad y 200 metros de alcance.
+  - Muy bajo consumo energético (especialmente Bluetooth Low Energy — BLE).
+
+Uso típico: Audífonos, teclados, ratones, wearables, transferencia de archivos entre dispositivos.
+
+
+PARTE II: DISPOSITIVOS DE INTERCONEXIÓN
+=========================================
+
+Los dispositivos de interconexión son los equipos encargados de conectar, dirigir, amplificar y gestionar el tráfico de datos dentro de una red o entre redes distintas. Cada dispositivo opera en una capa diferente del modelo OSI, lo que determina su nivel de "inteligencia" en el manejo de la información.
+
+
+1. HUB (CONCENTRADOR)
+---------------------
+
+El hub es el dispositivo de interconexión más básico y primitivo. Opera en la Capa 1 (Capa Física) del modelo OSI. Cuando recibe una señal por uno de sus puertos, simplemente la repite y la envía por todos los demás puertos simultáneamente, sin importar cuál es el destinatario real.
+
+Funcionamiento:
+Todos los dispositivos conectados al hub comparten el mismo dominio de colisión. Si dos dispositivos transmiten al mismo tiempo, se produce una colisión y ambos deben retransmitir sus datos.
+
+Características:
+  - Opera en Capa 1 (Física).
+  - No analiza el contenido de los paquetes.
+  - Transmisión tipo broadcast a todos los puertos.
+  - Genera un único dominio de colisión para todos los dispositivos.
+
+Ventajas:
+  - Muy económico.
+  - Simple de usar (plug and play).
+
+Desventajas:
+  - Genera muchas colisiones, degradando el rendimiento.
+  - No es inteligente: no distingue entre destinatarios.
+  - Prácticamente obsoleto; sustituido por switches.
+
+Uso actual: Prácticamente en desuso. Solo en entornos muy básicos o para análisis de redes (sniffing).
+
+
+2. SWITCH (CONMUTADOR)
+-----------------------
+
+El switch es el dispositivo estrella de las redes LAN modernas. Opera en la Capa 2 (Enlace de Datos) del modelo OSI y algunos modelos avanzados también en Capa 3 (Red). A diferencia del hub, el switch aprende y recuerda las direcciones MAC de los dispositivos conectados a cada uno de sus puertos, almacenándolas en una tabla llamada CAM o tabla de MAC.
+
+Funcionamiento:
+Cuando recibe un paquete, el switch consulta su tabla de MAC para identificar a qué puerto pertenece el dispositivo destinatario y envía el paquete únicamente por ese puerto. Esto elimina las colisiones innecesarias y hace la comunicación mucho más eficiente.
+
+Características:
+  - Opera en Capa 2 (y a veces Capa 3).
+  - Aprende y almacena direcciones MAC.
+  - Crea dominios de colisión independientes por puerto.
+  - Comunicación punto a punto entre emisor y receptor.
+  - Disponible en versiones administrables y no administrables.
+
+Ventajas:
+  - Alto rendimiento y eficiencia.
+  - Elimina colisiones al segmentar dominios.
+  - Seguridad mejorada respecto al hub.
+  - Soporte para VLANs en modelos administrables.
+
+Desventajas:
+  - Mayor costo que un hub.
+  - Requiere configuración en entornos complejos.
+
+Uso típico: Núcleo de cualquier red LAN moderna, oficinas, laboratorios, centros de datos.
+
+
+3. ROUTER (ENRUTADOR)
+----------------------
+
+El router es el dispositivo responsable de interconectar redes distintas y de dirigir el tráfico de datos entre ellas. Opera en la Capa 3 (Red) del modelo OSI y trabaja con direcciones IP en lugar de direcciones MAC. Es el dispositivo que conecta una red local (LAN) con Internet.
+
+Funcionamiento:
+El router mantiene tablas de enrutamiento que describen las rutas disponibles hacia distintas redes. Cuando recibe un paquete, analiza la dirección IP de destino y decide cuál es el mejor camino para enviarlo. Puede aprender rutas de forma estática (configuradas manualmente) o dinámica (mediante protocolos como OSPF, BGP o RIP).
+
+Características:
+  - Opera en Capa 3 (Red).
+  - Trabaja con direcciones IP.
+  - Interconecta redes diferentes (LAN-WAN, LAN-Internet).
+  - Realiza NAT (Network Address Translation) para compartir una IP pública.
+  - Implementa funciones de seguridad (firewall básico, filtrado de paquetes).
+
+Ventajas:
+  - Conecta redes de diferente tecnología y protocolo.
+  - Segmenta dominios de broadcast.
+  - Selecciona la mejor ruta disponible dinámicamente.
+  - Proporciona una capa básica de seguridad.
+
+Desventajas:
+  - Más costoso y complejo que switches y hubs.
+  - Introduce mayor latencia que un switch.
+  - Requiere configuración y administración especializada.
+
+Uso típico: Conexión de redes LAN a Internet, interconexión de sucursales empresariales, núcleo de redes WAN, routers domésticos.
+
+
+4. BRIDGE (PUENTE)
+------------------
+
+El bridge opera en la Capa 2 (Enlace de Datos) del modelo OSI. Su función principal es interconectar dos segmentos de red del mismo tipo y filtrar el tráfico entre ellos basándose en direcciones MAC. A diferencia del hub, el bridge "aprende" qué dispositivos están en cada segmento y solo reenvía el tráfico cuando es necesario.
+
+Funcionamiento:
+El bridge divide una red en dos segmentos, creando dos dominios de colisión independientes. Cuando recibe un frame, verifica si el destinatario está en el mismo segmento que el emisor. Si es así, bloquea el frame (no lo reenvía al otro segmento). Si el destinatario está en el otro segmento, lo reenvía.
+
+Características:
+  - Opera en Capa 2.
+  - Filtra tráfico basándose en direcciones MAC.
+  - Divide la red en dominios de colisión separados.
+  - Transparente para los dispositivos de la red.
+
+Ventajas:
+  - Reduce el tráfico innecesario entre segmentos.
+  - Extiende el alcance de una red.
+  - Mejora el rendimiento al segmentar dominios de colisión.
+
+Desventajas:
+  - Más lento que un switch en redes grandes.
+  - No puede interconectar redes con protocolos de Capa 3 distintos.
+  - En gran medida reemplazado funcionalmente por los switches modernos.
+
+Uso típico: Separación de segmentos de red, conexión de redes inalámbricas y cableadas, algunos equipos de acceso Wi-Fi actúan como bridges.
+
+
+5. REPETIDOR
+------------
+
+El repetidor opera en la Capa 1 (Física) del modelo OSI. Su única función es recibir una señal debilitada o distorsionada, amplificarla y regenerarla, y retransmitirla para que pueda recorrer distancias mayores sin degradarse.
+
+Funcionamiento:
+Las señales eléctricas u ópticas se atenúan con la distancia. El repetidor captura la señal antes de que se degrade demasiado, la regenera completamente (no solo la amplifica, sino que reconstruye la señal original) y la retransmite.
+
+Características:
+  - Opera en Capa 1 (Física).
+  - No analiza ni modifica el contenido de los datos.
+  - Extiende el alcance máximo de los medios de transmisión.
+  - Puede ser analógico (amplifica) o digital (regenera).
+
+Ventajas:
+  - Económico y simple.
+  - Extiende el alcance de la red sin infraestructura adicional compleja.
+
+Desventajas:
+  - No filtra tráfico: retransmite todo, incluyendo colisiones y errores.
+  - No segmenta dominios de colisión.
+  - Limitado a un solo tipo de medio de transmisión (no conecta medios diferentes).
+
+Uso típico: Extensión de redes Ethernet, amplificadores de señal Wi-Fi (repetidores Wi-Fi), líneas de telecomunicaciones de larga distancia.
+
+
+6. TRANSCEPTOR (TRANSCEIVER)
+-----------------------------
+
+El transceptor (contracción de "transmisor-receptor") es un dispositivo que puede tanto transmitir como recibir señales, combinando ambas funciones en una sola unidad. En el contexto de redes, los transceptores son fundamentales para convertir señales entre diferentes tipos de medios de transmisión.
+
+Tipos comunes en redes:
+  - SFP (Small Form-factor Pluggable): Módulos intercambiables usados en switches y routers para conectar fibra óptica o cobre. Permiten cambiar el tipo de interfaz sin reemplazar el equipo completo.
+  - GBIC (Gigabit Interface Converter): Versión más antigua y grande del SFP.
+  - Transceptores Ethernet: Convierten señales digitales a señales eléctricas para transmisión por cable de cobre.
+  - Transceptores ópticos: Convierten señales eléctricas en pulsos de luz para fibra óptica.
+  - Transceptores inalámbricos: Combinan el transmisor y receptor de radiofrecuencia en tarjetas Wi-Fi, Bluetooth, etc.
+
+Características:
+  - Combinan transmisión y recepción en un solo dispositivo.
+  - Generalmente intercambiables (hot-swappable) en equipos de red profesionales.
+  - Permiten adaptar un equipo a distintos tipos de medios de transmisión.
+
+Ventajas:
+  - Flexibilidad para cambiar el tipo de medio sin reemplazar el equipo principal.
+  - Reducen el espacio y costo al integrar dos funciones en uno.
+  - Modulares: fáciles de sustituir en caso de fallo.
+
+Desventajas:
+  - Los módulos SFP de alta velocidad pueden ser costosos.
+  - Requieren compatibilidad con el equipo en el que se instalan.
+
+Uso típico: Switches y routers de nivel empresarial, conexiones de fibra óptica en centros de datos, conversión de medios en redes heterogéneas.
+
+
+TABLA COMPARATIVA DE DISPOSITIVOS
+-----------------------------------
+
+  Dispositivo  |  Capa OSI  |  Inteligencia  |  Función principal
+  -------------+------------+----------------+-------------------------------------------
+  Hub          |  Capa 1    |  Ninguna       |  Repetir señal a todos los puertos
+  Repetidor    |  Capa 1    |  Ninguna       |  Regenerar y amplificar la señal
+  Transceptor  |  Capa 1    |  Ninguna       |  Convertir y transmitir/recibir señales
+  Bridge       |  Capa 2    |  Básica        |  Filtrar tráfico entre segmentos por MAC
+  Switch       |  Capa 2-3  |  Alta          |  Conmutar tramas por dirección MAC
+  Router       |  Capa 3    |  Muy alta      |  Enrutar paquetes entre redes por IP
+
+
+CONCLUSIÓN
+----------
+
+Los medios de conexión y los dispositivos de interconexión son los dos pilares físicos sobre los que se construye cualquier red informática. La elección del medio adecuado depende de factores como la distancia a cubrir, el ancho de banda requerido, el presupuesto disponible y el entorno de instalación. La elección del dispositivo de interconexión correcto determina la eficiencia, el rendimiento, la seguridad y la escalabilidad de la red. Comprender en profundidad cada uno de estos elementos es indispensable para cualquier profesional que desee diseñar, implementar o administrar redes informáticas modernas.
+
+============================================================
+Documento elaborado con fines educativos.
+Basado en el temario del pizarrón de clase.

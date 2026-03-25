@@ -1,0 +1,51 @@
+REDES INFORMÁTICAS: ORÍGENES Y DEFINICIÓN
+==========================================
+
+INTRODUCCIÓN
+------------
+
+Desde los albores de la civilización, los seres humanos han buscado maneras de comunicarse a grandes distancias. Sin embargo, no fue sino hasta la segunda mitad del siglo XX cuando la tecnología permitió crear redes de comunicación entre máquinas capaces de compartir información de forma rápida, eficiente y confiable. Las redes informáticas transformaron para siempre la manera en que el mundo funciona, y su evolución continúa siendo uno de los fenómenos tecnológicos más importantes de la historia moderna.
+
+
+DEFINICIÓN DE RED INFORMÁTICA
+------------------------------
+
+Una red informática es un conjunto de dos o más dispositivos electrónicos (computadoras, servidores, impresoras, teléfonos inteligentes, entre otros) interconectados entre sí mediante medios físicos o inalámbricos, con el propósito de compartir recursos, intercambiar datos y facilitar la comunicación entre usuarios. Estos dispositivos se comunican siguiendo un conjunto de reglas y protocolos estandarizados que garantizan que la información viaje de manera ordenada, segura e íntegra desde su origen hasta su destino.
+
+Las redes pueden clasificarse según su tamaño y alcance geográfico. Las redes de área local (LAN, por sus siglas en inglés) conectan dispositivos dentro de un espacio reducido, como una oficina o edificio. Las redes de área metropolitana (MAN) abarcan una ciudad o región. Las redes de área amplia (WAN) cubren grandes distancias geográficas, incluso continentes enteros. Internet, la red de redes, es el ejemplo más grande y conocido de una WAN a escala global.
+
+Además del alcance, las redes también se distinguen por su topología (la forma en que están organizados físicamente los nodos), su arquitectura (cliente-servidor o punto a punto) y los protocolos de comunicación que utilizan, siendo TCP/IP el más extendido en la actualidad.
+
+
+ORÍGENES DE LAS REDES INFORMÁTICAS
+------------------------------------
+
+La historia de las redes informáticas tiene sus raíces en la Guerra Fría. A finales de la década de 1950, el gobierno de los Estados Unidos temía que un ataque nuclear pudiera destruir sus sistemas de comunicación centralizados. Ante esta amenaza, la Agencia de Proyectos de Investigación Avanzada del Departamento de Defensa (DARPA, por sus siglas en inglés) comenzó a financiar investigaciones para crear un sistema de comunicaciones descentralizado que pudiera sobrevivir incluso ante un ataque bélico masivo.
+
+En 1969 nació ARPANET (Advanced Research Projects Agency Network), considerada la precursora directa del Internet moderno. Esta red conectó por primera vez cuatro nodos ubicados en universidades y centros de investigación de Estados Unidos: la Universidad de California en Los Ángeles (UCLA), el Stanford Research Institute (SRI), la Universidad de California en Santa Bárbara (UCSB) y la Universidad de Utah. El primer mensaje transmitido fue la palabra "LOGIN", aunque el sistema colapsó tras las dos primeras letras, enviando únicamente "LO". A pesar de este humilde comienzo, este evento marcó el inicio de una nueva era en las comunicaciones.
+
+Durante la década de 1970, los investigadores desarrollaron protocolos fundamentales que permitirían la expansión de estas redes. En 1974, Vint Cerf y Bob Kahn publicaron el protocolo TCP (Transmission Control Protocol), pieza clave para estandarizar la comunicación entre redes distintas. Más adelante, TCP fue complementado con IP (Internet Protocol), dando lugar al conjunto de protocolos TCP/IP que sigue siendo la base de Internet hoy en día. Por esta razón, Cerf y Kahn son ampliamente reconocidos como los "padres del Internet".
+
+En los años 80, las redes comenzaron a expandirse más allá del ámbito militar y académico. La Fundación Nacional de Ciencias de EE. UU. (NSF) creó NSFNET en 1986, una red de alta velocidad que conectó universidades y centros de investigación de todo el país. Paulatinamente, instituciones privadas y comerciales comenzaron a interesarse en las posibilidades que ofrecía esta tecnología.
+
+El gran salto hacia la masificación llegó en 1991, cuando el científico británico Tim Berners-Lee, trabajando en el CERN (Organización Europea para la Investigación Nuclear) en Suiza, inventó la World Wide Web (WWW). Berners-Lee desarrolló el lenguaje HTML, el protocolo HTTP y el concepto de URL, creando así un sistema de información basado en hipertexto que permitía navegar entre documentos enlazados a través de Internet. La WWW no es Internet en sí misma, sino un servicio que se ejecuta sobre él, pero fue este invento el que popularizó el uso de Internet entre el público general.
+
+En 1993, el lanzamiento del navegador Mosaic facilitó aún más el acceso a la Web, permitiendo que usuarios sin conocimientos técnicos pudieran explorar contenidos en línea con una interfaz gráfica intuitiva. A partir de entonces, el crecimiento fue exponencial: millones de personas, empresas y gobiernos se conectaron a la red, transformando la economía, la cultura, la educación y prácticamente todos los aspectos de la vida moderna.
+
+
+EVOLUCIÓN CONTINUA
+-------------------
+
+Desde aquellos primeros cuatro nodos de ARPANET hasta la actualidad, las redes informáticas han evolucionado de forma vertiginosa. Hoy en día, Internet conecta a más de cinco mil millones de personas alrededor del mundo, y con la llegada del Internet de las Cosas (IoT), miles de millones de dispositivos cotidianos —electrodomésticos, vehículos, sensores industriales— también forman parte de esta gran red global.
+
+Las redes inalámbricas, el desarrollo del estándar 5G, la computación en la nube y la inteligencia artificial son algunas de las fuerzas que continúan redefiniendo lo que una red puede hacer y significar. Sin duda, comprender los orígenes y la definición de las redes informáticas es el primer paso para entender el mundo hiperconectado en el que vivimos hoy.
+
+
+CONCLUSIÓN
+-----------
+
+Las redes informáticas surgieron como respuesta a una necesidad estratégica y científica, pero terminaron convirtiéndose en la infraestructura invisible sobre la que descansa la sociedad moderna. Desde ARPANET hasta el Internet de las Cosas, su historia es un testimonio del ingenio humano y del poder de la colaboración entre mentes brillantes de distintas partes del mundo. Entender qué son las redes y cómo nacieron nos permite apreciar mejor la tecnología que usamos cada día y reflexionar sobre el futuro que estamos construyendo con ella.
+
+==========================================
+Documento elaborado con fines educativos.
+Longitud aproximada: 700 palabras.

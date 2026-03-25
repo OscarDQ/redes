@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes de Computadoras | Topologías</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylestopologia.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@300;400;500&family=Oswald:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="sidebar-top">
+            <div class="logo">REDES<span>.</span></div>
+            <div class="nav-label">Fundamentos</div>
+            <ul class="nav-links">
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="alcance.html">Alcance PAN-WAN</a></li>
+            </ul>
+            <div class="nav-label">Tecnología</div>
+            <ul class="nav-links">
+                <li><a href="topologia.html" class="active">Topologías</a></li>
+                <li><a href="infraestructura.html">Infraestructura</a></li>
+                <li><a href="modelos.html">Modelo OSI</a></li>
+            </ul>
+        </div>
+        <div class="sidebar-firma">
+            <p class="text-secondary">OscarDQ</p>
+        </div>
+    </nav>
+
+    <main class="content">
+        <header class="top-bar">
+            <span class="page-title">Configuraciones de Red</span>
+        </header>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <h1 class="page-title-banner">Topologías Físicas y Lógicas</h1>
+        
+        <div class="content-block">
+            <h2 class="tech-header">Estructura Base</h2>
+            <p class="body-text">La topología determina cómo están organizados y conectados los dispositivos de una red, siendo el fundamento que garantiza un flujo de comunicación eficiente y sin saturaciones.</p>
+            <div class="info-box" style="border-left-color: #444; background: transparent; box-shadow: none; border: 1px solid var(--border);">
+                <p>La elección de topología tiene un impacto directo en el rendimiento, el costo operativo, la escalabilidad y la tolerancia a fallos de toda la red.</p>
+            </div>
+        </div>
+
+        <div class="divider-thin"></div>
+
+        <h2 class="tech-header">Tipos Básicos Históricos</h2>
+        
+        <div class="content-block">
+            <div class="topology-row">
+                <div class="topology-text">
+                    <h3 class="tech-sub-header">1. Topología Bus</h3>
+                    <p class="text-muted">Aprox. finales de 1970s</p>
+                    <p class="body-text">Todos los dispositivos se conectan a un único cable central denominado "backbone". La información es recibida por todos los nodos, pero solo el destinatario correcto la procesa.</p>
+                </div>
+                <div class="topology-img-wrapper">
+                    <img src="images/bus.png" alt="Topología Bus" class="topology-img">
+                </div>
+            </div>
+            <div class="grid-cards" style="margin-top: 20px;">
+                <div class="card-corporate">
+                    <h4>Ventajas</h4>
+                    <p class="text-secondary">Economía de implementación y sencillez de instalación. Requiere cableado mínimo, adecuada para redes temporales de pequeña escala.</p>
+                </div>
+                <div class="card-corporate">
+                    <h4>Sensibilidad</h4>
+                    <p class="text-secondary">La interrupción del cable central causa la caída de toda la red. Presenta baja escalabilidad y es susceptible a colisiones en entornos de alta carga.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-block">
+            <div class="topology-row">
+                <div class="topology-text">
+                    <h3 class="tech-sub-header">2. Topología Punto a Punto (P2P)</h3>
+                    <p class="text-muted">Aprox. finales de 1960s</p>
+                    <p class="body-text">Conexión dedicada y exclusiva entre dos dispositivos, sin necessidad de dispositivos intermediarios como switches o routers.</p>
+                </div>
+                <div class="topology-img-wrapper">
+                    <img src="images/p2p.png" alt="Topología Punto a Punto" class="topology-img">
+                </div>
+            </div>
+            <div class="grid-cards" style="margin-top: 20px;">
+                <div class="card-corporate">
+                    <h4>Ventajas</h4>
+                    <p class="text-secondary">Ancho de banda exclusivo y máxima privacidad garantizada entre los dos nodos enlazados.</p>
+                </div>
+                <div class="card-corporate">
+                    <h4>Sensibilidad</h4>
+                    <p class="text-secondary">Resulta inviable su escalado a múltiples nodos, ya que requiere un enlace dedicado por cada par de dispositivos.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider-thick"></div>
+
+        <h2 class="tech-header">Topologías Modernas Robustas</h2>
+
+        <div class="content-block">
+            <div class="topology-row">
+                <div class="topology-text">
+                    <h3 class="tech-sub-header">3. Topología Estrella</h3>
+                    <p class="body-text">Topología predominante en redes de área local modernas. Todos los dispositivos se conectan individualmente a un nodo central (switch), el cual administra y distribuye el tráfico de manera controlada.</p>
+                </div>
+                <div class="topology-img-wrapper">
+                    <img src="images/estrella.png" alt="Topología Estrella" class="topology-img">
+                </div>
+            </div>
+            <ul class="ui-list">
+                <li>El fallo de un nodo individual no afecta al resto de la red.</li>
+                <li>Permite un diagnóstico de fallos rápido e individualizado por dispositivo.</li>
+                <li>Fácil agregar o quitar equipos sin interrumpir la red.</li>
+                <li><strong>Vulnerabilidad crítica:</strong> Si el nodo central falla, toda la red queda inoperativa.</li>
+            </ul>
+        </div>
+        
+        <div class="content-block">
+            <div class="topology-row">
+                <div class="topology-text">
+                    <h3 class="tech-sub-header">4. Topología Anillo</h3>
+                    <p class="body-text">En la topología de anillo, cada dispositivo está conectado con exactamente otros dos nodos —el anterior y el siguiente— formando un círculo cerrado. Los datos viajan en forma de <strong>token</strong> (testigo), un paquete especial que circula continuamente por el anillo. Solo el dispositivo que posee el token puede transmitir, lo que elimina colisiones de forma elegante.</p>
+                </div>
+                <div class="topology-img-wrapper">
+                    <img src="images/anillo.png" alt="Topología Anillo" class="topology-img">
+                </div>
+            </div>
+            <div class="grid-cards" style="margin-top: 20px;">
+                <div class="card-corporate">
+                    <h4>Ventajas</h4>
+                    <p class="text-secondary">Sin colisiones por el sistema de token. Rendimiento predecible y estable bajo carga alta. En anillo doble, ofrece redundancia ante fallos.</p>
+                </div>
+                <div class="card-corporate">
+                    <h4>Sensibilidad</h4>
+                    <p class="text-secondary">Si un solo nodo o cable falla en un anillo simple, toda la red se interrumpe. Agregar o quitar dispositivos interrumpe temporalmente el servicio.</p>
+                </div>
+            </div>
+            <div class="info-box" style="margin-top: 16px; border-left-color: #444; background: transparent; box-shadow: none; border: 1px solid var(--border);">
+                <p><strong>Uso típico:</strong> Redes Token Ring (IBM), redes FDDI de fibra óptica, algunas redes metropolitanas y de operadores de telecomunicaciones. Hoy prácticamente reemplazada por la topología Estrella.</p>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <div class="topology-row">
+                <div class="topology-text">
+                    <h3 class="tech-sub-header">5. Topología Malla</h3>
+                    <p class="body-text">Cada dispositivo se conecta con múltiples vecinos, generando redundancia de rutas. En caso de fallo de un enlace, los datos se redirigen automáticamente por una ruta alternativa disponible.</p>
+                </div>
+                <div class="topology-img-wrapper">
+                    <img src="images/malla.png" alt="Topología Malla" class="topology-img">
+                </div>
+            </div>
+            <ul class="ui-list" style="margin-top: 10px;">
+                <li><strong>Malla completa (full mesh):</strong> cada nodo conectado con absolutamente todos los demás.</li>
+                <li><strong>Malla parcial:</strong> equilibrio entre redundancia y costo; solo algunos nodos tienen múltiples conexiones.</li>
+                <li>Los protocolos <strong>OSPF</strong> y <strong>BGP</strong> seleccionan la ruta óptima en cada momento.</li>
+            </ul>
+            <div class="info-box" style="border-left-color: #444; background: transparent; box-shadow: none; border: 1px solid var(--border);">
+                <p><strong>Alta disponibilidad:</strong> La interrupción de múltiples enlaces simultáneos no detiene la transmisión, ya que existen rutas alternativas disponibles. Es la columna vertebral de Internet.</p>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <div class="topology-row">
+                <div class="topology-text">
+                    <h3 class="tech-sub-header">6. Topología Árbol (Jerárquica)</h3>
+                    <p class="text-muted">Extensión de la Estrella — muy común en redes corporativas</p>
+                    <p class="body-text">Estructura jerárquica con un nodo raíz en la cima, del que se ramifican nodos intermedios, y de estos se desprenden los nodos hoja (dispositivos finales). Es la topología dominante en grandes corporaciones y campus universitarios.</p>
+                </div>
+                <div class="topology-img-wrapper">
+                    <img src="images/arbol.png" alt="Topología Árbol" class="topology-img">
+                </div>
+            </div>
+            <ul class="ui-list" style="margin-top: 10px;">
+                <li>Combina características de la topología <strong>Estrella</strong> y <strong>Bus</strong>.</li>
+                <li>Permite segmentar la red por departamentos o pisos de forma ordenada.</li>
+                <li>Muy escalable: se pueden agregar nuevas ramas sin reconfigurar toda la red.</li>
+                <li><strong>Vulnerabilidad:</strong> Si el nodo raíz falla, toda la red queda afectada.</li>
+            </ul>
+        </div>
+
+        <div class="content-block">
+            <div class="topology-row">
+                <div class="topology-text">
+                    <h3 class="tech-sub-header">7. Topología Mixta (Híbrida)</h3>
+                    <p class="body-text">Combinación de dos o más topologías distintas en una misma red. En la práctica es la más común en entornos empresariales reales, ya que permite aprovechar las fortalezas de cada topología según el segmento de red.</p>
+                </div>
+                <div class="topology-img-wrapper">
+                    <img src="images/mixta.png" alt="Topología Mixta" class="topology-img">
+                </div>
+            </div>
+            <div class="info-box" style="border-left-color: #444; background: transparent; box-shadow: none; border: 1px solid var(--border);">
+                <p><strong>Ejemplo real:</strong> Una empresa puede usar topología <strong>Estrella</strong> dentro de cada piso, topología <strong>Árbol</strong> para conectar los distintos pisos, y topología <strong>Malla parcial</strong> para interconectar sus sucursales a nivel nacional.</p>
+            </div>
+        </div>
+
+        <div class="divider-thick"></div>
+
+        <h2 class="tech-header">Tabla Comparativa</h2>
+        <div class="content-block">
+            <div style="overflow-x: auto; margin: 20px 0;">
+                <table style="width: 100%; border-collapse: collapse; text-align: left; background-color: var(--bg-sidebar); border-radius: 8px; overflow: hidden; border: 1px solid var(--border); font-size: 0.9rem;">
+                    <thead>
+                        <tr style="background-color: var(--hover); color: var(--accent);">
+                            <th style="padding: 10px 14px; border-bottom: 2px solid var(--accent); border-right: 1px solid var(--border);">Topología</th>
+                            <th style="padding: 10px 14px; border-bottom: 2px solid var(--accent); border-right: 1px solid var(--border);">Costo</th>
+                            <th style="padding: 10px 14px; border-bottom: 2px solid var(--accent); border-right: 1px solid var(--border);">Escalabilidad</th>
+                            <th style="padding: 10px 14px; border-bottom: 2px solid var(--accent); border-right: 1px solid var(--border);">Tolerancia a Fallos</th>
+                            <th style="padding: 10px 14px; border-bottom: 2px solid var(--accent);">Complejidad</th>
+                        </tr>
+                    </thead>
+                    <tbody style="font-family: 'Montserrat', sans-serif; color: #b0b0b0;">
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 10px 14px; font-weight: bold; color: #fff; border-right: 1px solid var(--border);">Bus</td><td style="padding: 10px 14px; border-right: 1px solid var(--border);">Muy bajo</td><td style="padding: 10px 14px; border-right: 1px solid var(--border);">Baja</td><td style="padding: 10px 14px; color: #e57373; border-right: 1px solid var(--border);">Muy baja</td><td style="padding: 10px 14px;">Muy baja</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 10px 14px; font-weight: bold; color: #fff; border-right: 1px solid var(--border);">P2P</td><td style="padding: 10px 14px; border-right: 1px solid var(--border);">Muy bajo</td><td style="padding: 10px 14px; border-right: 1px solid var(--border);">Nula</td><td style="padding: 10px 14px; color: #66bb6a; border-right: 1px solid var(--border);">Alta</td><td style="padding: 10px 14px;">Muy baja</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 10px 14px; font-weight: bold; color: #fff; border-right: 1px solid var(--border);">Anillo</td><td style="padding: 10px 14px; border-right: 1px solid var(--border);">Medio</td><td style="padding: 10px 14px; border-right: 1px solid var(--border);">Media</td><td style="padding: 10px 14px; color: #ffb74d; border-right: 1px solid var(--border);">Baja / Media</td><td style="padding: 10px 14px;">Media</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 10px 14px; font-weight: bold; color: var(--accent); border-right: 1px solid var(--border);">Estrella</td><td style="padding: 10px 14px; border-right: 1px solid var(--border);">Medio</td><td style="padding: 10px 14px; border-right: 1px solid var(--border);">Alta</td><td style="padding: 10px 14px; color: #ffb74d; border-right: 1px solid var(--border);">Media</td><td style="padding: 10px 14px;">Baja</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 10px 14px; font-weight: bold; color: #fff; border-right: 1px solid var(--border);">Malla</td><td style="padding: 10px 14px; border-right: 1px solid var(--border);">Muy alto</td><td style="padding: 10px 14px; border-right: 1px solid var(--border);">Media</td><td style="padding: 10px 14px; color: #66bb6a; border-right: 1px solid var(--border);">Muy alta</td><td style="padding: 10px 14px;">Muy alta</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 10px 14px; font-weight: bold; color: #fff; border-right: 1px solid var(--border);">Árbol</td><td style="padding: 10px 14px; border-right: 1px solid var(--border);">Medio</td><td style="padding: 10px 14px; border-right: 1px solid var(--border);">Muy alta</td><td style="padding: 10px 14px; color: #ffb74d; border-right: 1px solid var(--border);">Media</td><td style="padding: 10px 14px;">Media</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px 14px; font-weight: bold; color: #fff; border-right: 1px solid var(--border);">Mixta</td><td style="padding: 10px 14px; border-right: 1px solid var(--border);">Variable</td><td style="padding: 10px 14px; border-right: 1px solid var(--border);">Muy alta</td><td style="padding: 10px 14px; color: #66bb6a; border-right: 1px solid var(--border);">Variable</td><td style="padding: 10px 14px;">Alta</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="divider-thick"></div>
+
+        <h2 class="tech-header">Decisión Estructural Final</h2>
+        <div class="content-block">
+            <p class="body-text">No existe una topología universalmente perfecta. La selección está condicionada por el presupuesto disponible, el número de nodos y el nivel de resiliencia requerido por la organización:</p>
+            <ul class="ui-list">
+                <li><strong>Entornos domésticos y pequeñas oficinas:</strong> La topología en <strong>Estrella</strong> ofrece suficiente cobertura al menor costo.</li>
+                <li><strong>Redes corporativas de múltiples niveles:</strong> La topología en <strong>Árbol</strong> permite segmentar departamentos de forma ordenada y escalable.</li>
+                <li><strong>Entornos críticos (centros de datos, defensa):</strong> La topología en <strong>Malla</strong> justifica su elevado costo al garantizar continuidad operativa ante fallos.</li>
+                <li><strong>Mayoría de redes empresariales reales:</strong> La topología <strong>Mixta</strong> combina lo mejor de cada esquema según las necesidades de cada segmento.</li>
+            </ul>
+        </div>
+    </main>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            document.getElementById('progressFill').style.width = progress + '%';
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,234 @@
+TOPOLOGÍAS DE RED: DEFINICIÓN Y TIPOS
+======================================
+
+INTRODUCCIÓN
+------------
+
+La topología de red hace referencia a la forma en que los dispositivos (nodos) de una red están organizados y conectados entre sí, tanto física como lógicamente. Elegir la topología correcta es una decisión crítica al momento de diseñar una red, ya que afecta directamente el rendimiento, la escalabilidad, el costo de implementación, la facilidad de mantenimiento y la tolerancia a fallos del sistema. Existen distintos tipos de topologías, cada una con sus propias características, ventajas y desventajas. Las principales son: Bus, Punto a Punto (P2P), Estrella, Anillo, Malla, Árbol y Mixta.
+
+Es importante distinguir entre la topología física (la disposición real de los cables y dispositivos en el espacio) y la topología lógica (la forma en que los datos viajan a través de la red, independientemente de cómo estén conectados físicamente los dispositivos).
+
+
+1. TOPOLOGÍA BUS
+----------------
+
+La topología de bus es una de las más antiguas y simples. En ella, todos los dispositivos de la red están conectados a un único cable central llamado "bus" o "backbone". Los datos enviados por cualquier dispositivo viajan a lo largo de este cable en ambas direcciones y son recibidos por todos los nodos, pero solo el destinatario los procesa. En los extremos del cable se colocan terminadores para absorber la señal y evitar que rebote.
+
+Funcionamiento:
+Cuando un dispositivo desea enviar datos, los transmite al bus. La señal recorre el cable completo y llega a todos los nodos. Cada nodo revisa la dirección de destino del paquete; si coincide con la suya, lo acepta; de lo contrario, lo ignora. Solo un dispositivo puede transmitir a la vez, lo que puede provocar colisiones si varios intentan hacerlo simultáneamente.
+
+Características:
+  - Cable único compartido por todos los nodos.
+  - Comunicación de tipo broadcast (todos reciben, uno acepta).
+  - Uso de terminadores en los extremos del cable.
+  - Utiliza el protocolo CSMA/CD para gestionar colisiones.
+
+Ventajas:
+  - Fácil y económica de implementar.
+  - Requiere poca cantidad de cable.
+  - Agregar nuevos dispositivos es sencillo.
+
+Desventajas:
+  - Si el cable central falla, toda la red deja de funcionar.
+  - El rendimiento disminuye conforme aumenta el número de dispositivos.
+  - Difícil de diagnosticar fallos específicos.
+  - No es escalable para redes grandes.
+
+Uso típico: Redes pequeñas y antiguas. Hoy en día está prácticamente en desuso, sustituida por topologías más eficientes.
+
+
+2. TOPOLOGÍA PUNTO A PUNTO (P2P - Peer to Peer)
+------------------------------------------------
+
+La topología punto a punto (P2P) es la más simple de todas: consiste en una conexión directa entre exactamente dos dispositivos. No existe ningún intermediario entre ellos; la comunicación es directa, exclusiva y bidireccional.
+
+Funcionamiento:
+Ambos dispositivos están enlazados directamente mediante un cable (o enlace inalámbrico). Los datos fluyen directamente del origen al destino sin pasar por ningún otro nodo. Cada dispositivo puede actuar simultáneamente como emisor y receptor.
+
+Características:
+  - Solo involucra dos nodos.
+  - Enlace dedicado y exclusivo entre ambos dispositivos.
+  - Alta velocidad y baja latencia al no haber intermediarios.
+  - Puede ser cableada (cable directo, cruzado) o inalámbrica.
+
+Ventajas:
+  - Extremadamente simple de configurar.
+  - Alta velocidad y eficiencia al tener un canal dedicado.
+  - Muy confiable: no depende de otros nodos.
+  - Sin riesgo de colisiones de datos.
+
+Desventajas:
+  - Solo conecta dos dispositivos; no es escalable como topología única.
+  - Para conectar múltiples dispositivos se necesitan múltiples enlaces P2P, lo que aumenta el costo.
+
+Uso típico: Conexiones directas entre dos computadoras, enlaces entre dos routers en redes WAN, conexiones de módem, comunicación entre servidor y cliente directo.
+
+
+3. TOPOLOGÍA ESTRELLA
+---------------------
+
+La topología estrella es actualmente la más utilizada en redes LAN modernas. En ella, todos los dispositivos están conectados a un nodo central, que generalmente es un switch o un hub. Ningún dispositivo se comunica directamente con otro; toda la comunicación pasa obligatoriamente por el dispositivo central.
+
+Funcionamiento:
+Cuando un dispositivo desea enviar datos a otro, los envía primero al switch central. El switch analiza la dirección de destino y reenvía el paquete únicamente al dispositivo correspondiente. Esto elimina colisiones y hace la red mucho más eficiente que el bus.
+
+Características:
+  - Nodo central (switch/hub) que gestiona toda la comunicación.
+  - Cada dispositivo tiene su propio enlace dedicado al centro.
+  - Fácil detección y aislamiento de fallos.
+  - Ampliamente utilizada en redes domésticas y empresariales.
+
+Ventajas:
+  - Si un dispositivo falla, los demás siguen funcionando con normalidad.
+  - Fácil de agregar o quitar dispositivos sin interrumpir la red.
+  - Fácil diagnóstico de problemas: basta con identificar el cable o dispositivo defectuoso.
+  - Alto rendimiento gracias a los switches modernos.
+
+Desventajas:
+  - El nodo central es un punto único de fallo: si el switch falla, toda la red se cae.
+  - Requiere más cable que la topología bus (un cable por cada dispositivo).
+  - El costo aumenta con el número de dispositivos (más puertos en el switch).
+
+Uso típico: Redes domésticas con router Wi-Fi, redes de oficinas, laboratorios de cómputo, redes empresariales pequeñas y medianas.
+
+
+4. TOPOLOGÍA ANILLO
+-------------------
+
+En la topología de anillo, cada dispositivo está conectado exactamente con otros dos: el anterior y el siguiente, formando un círculo cerrado. Los datos viajan en una sola dirección (unidireccional) o en ambas direcciones (bidireccional, llamado anillo doble) alrededor del anillo hasta llegar a su destino.
+
+Funcionamiento:
+Los datos se transmiten en forma de "token" (testigo), un paquete especial que circula continuamente por el anillo. Solo el dispositivo que posee el token puede enviar datos. Una vez que termina la transmisión, libera el token para que el siguiente dispositivo pueda usarlo. Esto evita colisiones de forma elegante.
+
+Características:
+  - Cada nodo está conectado con exactamente dos vecinos.
+  - Uso del protocolo Token Ring para controlar el acceso al medio.
+  - El tráfico fluye en una dirección fija (o dos en anillo doble).
+  - Cada dispositivo actúa como repetidor de la señal.
+
+Ventajas:
+  - No hay colisiones gracias al sistema de token.
+  - Rendimiento predecible y estable bajo carga alta.
+  - Fácil de implementar en redes de tamaño mediano.
+  - En anillo doble, ofrece redundancia ante fallos.
+
+Desventajas:
+  - Si un nodo o cable falla en un anillo simple, toda la red se interrumpe.
+  - Agregar o quitar dispositivos interrumpe temporalmente la red.
+  - Más lenta que la estrella en condiciones de baja carga.
+  - Ha sido prácticamente reemplazada por topologías más modernas.
+
+Uso típico: Redes Token Ring (IBM), redes FDDI de fibra óptica, algunas redes metropolitanas y de operadores de telecomunicaciones.
+
+
+5. TOPOLOGÍA MALLA
+------------------
+
+La topología de malla es la más robusta y tolerante a fallos de todas. En ella, cada dispositivo está conectado directamente con todos o varios de los demás nodos de la red, creando múltiples rutas posibles para que los datos lleguen a su destino.
+
+Existen dos variantes:
+  - Malla completa (full mesh): Cada nodo está conectado con absolutamente todos los demás. Ofrece la máxima redundancia posible.
+  - Malla parcial (partial mesh): Solo algunos nodos tienen múltiples conexiones. Es un equilibrio entre redundancia y costo.
+
+Funcionamiento:
+Los datos pueden viajar por múltiples rutas entre origen y destino. Si un enlace falla, los datos se redirigen automáticamente por una ruta alternativa, garantizando la continuidad de la comunicación. Los protocolos de enrutamiento dinámico (como OSPF o BGP) se encargan de elegir la mejor ruta disponible en cada momento.
+
+Características:
+  - Alta redundancia de rutas.
+  - Gran tolerancia a fallos.
+  - Requiere una gran cantidad de conexiones y cable.
+  - Muy costosa de implementar en su versión completa.
+
+Ventajas:
+  - Máxima confiabilidad: un fallo en un enlace no afecta la red.
+  - Alta seguridad y privacidad al poder dedicar canales exclusivos.
+  - Excelente rendimiento al distribuir el tráfico entre múltiples rutas.
+  - Fácil identificación y aislamiento de fallos.
+
+Desventajas:
+  - Muy costosa en hardware y cableado, especialmente en malla completa.
+  - Compleja de configurar y administrar.
+  - No es práctica para redes con muchos dispositivos en entornos locales.
+
+Uso típico: Internet (la columna vertebral de Internet es una malla parcial), redes militares, infraestructuras críticas, centros de datos de alta disponibilidad, redes de telecomunicaciones entre ciudades.
+
+
+6. TOPOLOGÍA ÁRBOL
+------------------
+
+La topología árbol (también llamada topología jerárquica) es una extensión de la topología estrella. En lugar de tener un único nodo central, existen varios niveles jerárquicos: un nodo raíz en la cima, del que se ramifican nodos intermedios, y de estos se desprenden los nodos hoja (dispositivos finales). La estructura resultante se asemeja visualmente a un árbol con sus ramas.
+
+Funcionamiento:
+Los datos fluyen de forma jerárquica: de los nodos hoja hacia los nodos intermedios y de estos hacia el nodo raíz, o en sentido inverso. Los nodos intermedios actúan como concentradores que agrupan el tráfico de sus ramas antes de enviarlo al nivel superior.
+
+Características:
+  - Estructura jerárquica con nodo raíz, nodos intermedios y nodos hoja.
+  - Combina características de la topología estrella y bus.
+  - Muy utilizada en redes corporativas de gran tamaño.
+  - Fácil de segmentar y administrar por departamentos o áreas.
+
+Ventajas:
+  - Muy escalable: se pueden agregar nuevas ramas sin reconfigurar toda la red.
+  - Fácil de administrar y expandir de forma ordenada.
+  - El fallo en una rama no afecta a las demás (si el nodo intermedio sigue funcionando).
+  - Ideal para organizar redes por departamentos o pisos de un edificio.
+
+Desventajas:
+  - El nodo raíz es un punto crítico: si falla, toda la red queda afectada.
+  - A mayor número de niveles jerárquicos, mayor latencia.
+  - Requiere una planificación cuidadosa para evitar cuellos de botella en los nodos intermedios.
+  - Más compleja que la estrella simple.
+
+Uso típico: Redes corporativas grandes, redes universitarias con múltiples edificios, infraestructuras de campus, redes de proveedores de servicios de Internet.
+
+
+7. TOPOLOGÍA MIXTA (Híbrida)
+-----------------------------
+
+La topología mixta o híbrida es la combinación de dos o más topologías distintas en una misma red. En la práctica, es la más común en entornos empresariales y corporativos reales, ya que pocas redes del mundo real utilizan una sola topología de forma pura.
+
+Funcionamiento:
+Diferentes segmentos de la red utilizan la topología más adecuada para sus necesidades específicas. Por ejemplo, una empresa puede tener topología estrella dentro de cada piso de su edificio, topología árbol para conectar los distintos pisos entre sí, y topología malla parcial para interconectar sus sucursales a nivel nacional.
+
+Características:
+  - Combina las características de múltiples topologías.
+  - Altamente flexible y adaptable a cualquier necesidad.
+  - Permite optimizar cada segmento de la red de forma independiente.
+  - Es la realidad de la mayoría de redes medianas y grandes.
+
+Ventajas:
+  - Máxima flexibilidad de diseño.
+  - Permite aprovechar las fortalezas de cada topología y minimizar sus debilidades.
+  - Escalable y adaptable a medida que la organización crece.
+  - Tolerante a fallos si se integran componentes de malla en zonas críticas.
+
+Desventajas:
+  - Más compleja de diseñar, implementar y administrar.
+  - Puede ser costosa si se combinan topologías que requieren mucha infraestructura.
+  - Requiere personal técnico capacitado para su gestión.
+
+Uso típico: Prácticamente cualquier red empresarial o corporativa real, redes universitarias de gran tamaño, infraestructuras de centros de datos, Internet en su conjunto.
+
+
+TABLA COMPARATIVA
+-----------------
+
+  Topología  |  Costo    |  Escalabilidad  |  Tolerancia a fallos  |  Complejidad
+  -----------+-----------+-----------------+-----------------------+-------------
+  Bus        |  Muy bajo |  Baja           |  Muy baja             |  Muy baja
+  P2P        |  Muy bajo |  Nula           |  Alta                 |  Muy baja
+  Estrella   |  Medio    |  Alta           |  Media                |  Baja
+  Anillo     |  Medio    |  Media          |  Baja / Media         |  Media
+  Malla      |  Muy alto |  Media          |  Muy alta             |  Muy alta
+  Árbol      |  Medio    |  Muy alta       |  Media                |  Media
+  Mixta      |  Variable |  Muy alta       |  Variable             |  Alta
+
+
+CONCLUSIÓN
+----------
+
+No existe una topología universalmente perfecta. La elección de la topología adecuada depende siempre del contexto: el tamaño de la red, el presupuesto disponible, los requisitos de rendimiento, la tolerancia a fallos necesaria y la facilidad de administración deseada. En redes domésticas y pequeñas oficinas, la estrella es la opción dominante. En grandes corporaciones, la topología árbol o mixta es la más frecuente. En infraestructuras críticas donde no puede haber interrupciones, la malla es indispensable. Comprender cada topología a fondo es esencial para cualquier profesional de redes o tecnologías de la información.
+
+======================================
+Documento elaborado con fines educativos.
+Basado en el temario del pizarrón de clase.

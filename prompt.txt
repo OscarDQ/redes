@@ -1,0 +1,169 @@
+<task>
+Refactor global UI system: sidebar, topbar, typography, and reusable visual components to improve hierarchy, consistency, and scalability.
+</task>
+
+<context>
+Static educational website (HTML + CSS).
+Dark theme (#1e1e1e main, #252526 sidebar, accent #f9826c).
+Current UI is visually decent but lacks strong hierarchy, consistency, and reusable design system.
+</context>
+
+<problems>
+- Weak visual hierarchy across all text elements
+- Sidebar feels generic and not structured as learning navigation
+- Topbar lacks presence and functional clarity
+- Typography is inconsistent and lacks defined scale
+- No reusable visual system (dividers, spacing, components)
+- Overuse of accent color without hierarchy
+</problems>
+
+<goals>
+- Create strong, clear visual hierarchy
+- Standardize typography system
+- Improve navigation clarity (sidebar + topbar)
+- Introduce reusable UI components
+- Make UI feel like a structured product, not a styled document
+</goals>
+
+<instructions>
+
+<sidebar>
+- Improve visual hierarchy of navigation items
+- Active item must be clearly dominant (not just slightly highlighted)
+- Add better spacing between items
+- Group items logically (simulate learning progression)
+- Reduce visual noise (avoid too many similar emphasis levels)
+- Improve hover state (clear but subtle)
+
+Optional:
+- Add section labels (e.g., "Fundamentals", "Architecture")
+</sidebar>
+
+<topbar>
+- Increase visual presence (height, spacing, or contrast)
+- Title must be clearly readable and dominant
+- Separate visually from content (divider or shadow)
+- Ensure sticky behavior feels intentional (not accidental)
+
+Optional:
+- Add subtle bottom border or gradient separator
+</topbar>
+
+<typography_system>
+Define a CLEAR typographic scale:
+
+- h1 → main title (largest, strongest)
+- h2 → section titles
+- h3 → subsections
+- h4 → minor headings (optional)
+- body → normal text
+- small → secondary info
+
+Rules:
+- Each level must be visually distinguishable
+- Increase contrast between levels (size + weight)
+- Reduce weight of body text for readability
+- Ensure consistent spacing between text elements
+</typography_system>
+
+<text_rules>
+- Max line length: readable (avoid very wide text blocks)
+- Avoid long paragraphs (>3 lines)
+- Use spacing between paragraphs
+- Prioritize scannability over density
+</text_rules>
+
+<color_system>
+- Accent color (#f9826c) ONLY for:
+  - important titles
+  - active states
+  - highlights
+
+- Define neutral hierarchy:
+  - primary text (high contrast)
+  - secondary text (medium contrast)
+  - muted text (low contrast)
+
+- Avoid using accent color everywhere
+</color_system>
+
+<reusable_components>
+
+<dividers>
+- Create reusable horizontal divider:
+  - subtle gray line
+  - consistent margin (top & bottom)
+- Variants:
+  - thin (section separation)
+  - thicker (major separation)
+</dividers>
+
+<spacers>
+- Define consistent spacing system:
+  - small
+  - medium
+  - large
+- Use for vertical rhythm instead of random margins
+</spacers>
+
+<content_blocks>
+- Create reusable container blocks:
+  - section container
+  - highlighted box (info-box)
+  - neutral content block
+
+Each must:
+- have padding
+- clear separation
+- consistent style
+</content_blocks>
+
+<lists>
+- Improve list styling:
+  - custom bullets or markers
+  - better spacing between items
+</lists>
+
+<cards>
+- Define reusable card component:
+  - padding
+  - subtle background difference
+  - optional hover effect
+</cards>
+
+</reusable_components>
+
+<layout_rules>
+- Increase whitespace globally
+- Avoid cramped sections
+- Maintain consistent alignment
+- Keep grid simple (no overengineering)
+</layout_rules>
+
+<ux_principles>
+- Everything must be scannable
+- Clear visual entry points
+- No element should compete unnecessarily
+- UI must guide reading flow
+</ux_principles>
+
+</instructions>
+
+<constraints>
+- Keep dark theme
+- Do not add external frameworks
+- Avoid heavy animations
+- Keep code clean and maintainable
+</constraints>
+
+<success_criteria>
+- Clear distinction between all text levels
+- Sidebar navigation feels structured and intentional
+- Topbar clearly separates from content
+- Reusable components exist and are consistent
+- Layout feels clean, spaced, and readable
+</success_criteria>
+
+<output>
+Refactored HTML structure + CSS system with reusable components and strong hierarchy
+</output>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes de Computadoras | Alcance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesalcance.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@300;400;500&family=Oswald:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="sidebar-top">
+            <div class="logo">REDES<span>.</span></div>
+            <div class="nav-label">Fundamentos</div>
+            <ul class="nav-links">
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="alcance.html" class="active">Alcance PAN-WAN</a></li>
+            </ul>
+            <div class="nav-label">Tecnología</div>
+            <ul class="nav-links">
+                <li><a href="topologia.html">Topologías</a></li>
+                <li><a href="infraestructura.html">Infraestructura</a></li>
+                <li><a href="modelos.html">Modelo OSI</a></li>
+            </ul>
+        </div>
+        <div class="sidebar-firma">
+            <p class="text-secondary">OscarDQ</p>
+        </div>
+    </nav>
+
+    <main class="content">
+        <header class="top-bar">
+            <span class="page-title">Alcance Geográfico</span>
+        </header>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        
+        <h1 class="page-title-banner">Alcance Geográfico de las Redes</h1>
+        <p class="body-text">La clasificación según el alcance geográfico determina la distancia física que una red puede cubrir. Conocer este detalle a fondo es fundamental para entender cómo se diseñan, administran y utilizan las redes en distintos entornos, desde el bolsillo de una persona hasta los océanos del planeta.</p>
+
+        <!-- PAN -->
+        <div class="content-block network-section">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem; flex-wrap: wrap;">
+                <span style="background: #392b3d; border: 1px solid #795282; color: #e0e0e0; padding: 0.3rem 1rem; border-radius: 20px; font-weight: 600; font-family: 'Oswald', sans-serif; font-size: 0.9rem; letter-spacing: 0.5px;">📏 1 A 10 METROS</span>
+                <h2 style="margin: 0; font-size: 2rem; color: var(--text-primary); font-weight: 600; letter-spacing: -0.5px; border-bottom: none; padding-bottom: 0;">Red de Área Personal <span style="color: #795282; font-weight: 400;">(PAN)</span></h2>
+            </div>
+            
+            <p class="body-text" style="font-size: 1.05rem; line-height: 1.7; color: var(--text-secondary); max-width: 900px;">
+                La <strong>PAN</strong> es la red de menor alcance. Su función principal es posibilitar la comunicación entre los dispositivos inmediatos de un solo usuario (smartphones, audífonos, smartwatches) de forma fluida y sin requerir infraestructura ajena.
+            </p>
+            
+            <div class="grid-cards" style="margin-top: 1.5rem;">
+                <div class="card" style="border-top: 2px solid #795282; background: var(--bg-main); border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                    <h4 style="color: #ae86b8; font-size: 1.15rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;">⚙️ Tecnologías Base</h4>
+                    <ul class="ui-list" style="margin-left: 10px; color: var(--text-secondary);">
+                        <li><strong>Bluetooth:</strong> Líder indiscutible para audífonos y conexiones inmediatas.</li>
+                        <li><strong>Infrarrojo (IrDA):</strong> Herencia electrónica con visión estricta.</li>
+                        <li><strong>Zigbee / Z-Wave:</strong> Cimientos de la domótica actual.</li>
+                        <li><strong>USB:</strong> Acople físico a nivel personal.</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-top: 2px solid #795282; background: var(--bg-main); border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                    <h4 style="color: #ae86b8; font-size: 1.15rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;">⚖️ Balance</h4>
+                    <ul class="ui-list" style="margin-left: 10px; color: var(--text-secondary);">
+                        <li><span style="color: #ae86b8; font-weight: bold;">✔</span> Altísima privacidad por su rango nulo de fuga.</li>
+                        <li><span style="color: #ae86b8; font-weight: bold;">✔</span> Consumo energético excepcional (Low Energy).</li>
+                        <li><span style="color: #ae86b8; font-weight: bold;">✘</span> Transferencia modesta respecto a redes completas.</li>
+                        <li><span style="color: #ae86b8; font-weight: bold;">✘</span> Ecosistema estrictamente individual o monousuario.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- LAN -->
+        <div class="content-block network-section">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem; flex-wrap: wrap;">
+                <span style="background: #4a331a; border: 1px solid #b2681a; color: #e0e0e0; padding: 0.3rem 1rem; border-radius: 20px; font-weight: 600; font-family: 'Oswald', sans-serif; font-size: 0.9rem; letter-spacing: 0.5px;">🏢 HASTA 2 KILÓMETROS</span>
+                <h2 style="margin: 0; font-size: 2rem; color: var(--text-primary); font-weight: 600; letter-spacing: -0.5px; border-bottom: none; padding-bottom: 0;">Red de Área Local <span style="color: #b2681a; font-weight: 400;">(LAN)</span></h2>
+            </div>
+            
+            <p class="body-text" style="font-size: 1.05rem; line-height: 1.7; color: var(--text-secondary); max-width: 900px;">
+                La <strong>LAN</strong> rige la productividad en recintos fijos, desde el sector financiero hasta la red familiar. Comparte recursos críticos entre diversas máquinas estableciendo un nodo de autonomía digital total con velocidades masivas de transporte.
+            </p>
+            
+            <div class="grid-cards" style="margin-top: 1.5rem;">
+                <div class="card" style="border-top: 2px solid #b2681a; background: var(--bg-main); border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                    <h4 style="color: #d18d45; font-size: 1.15rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;">⚙️ Tecnologías Base</h4>
+                    <ul class="ui-list" style="margin-left: 10px; color: var(--text-secondary);">
+                        <li><strong>Ethernet (IEEE 802.3):</strong> Columna estructural cableada de la oficina (UTP/Fibra).</li>
+                        <li><strong>Wi-Fi 6 / 6E:</strong> Dominio aéreo ilimitado sin cuellos de botella para el consumidor.</li>
+                        <li><strong>Hardware Core:</strong> Switches Layer 2/3 y puntos de enrutado directos.</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-top: 2px solid #b2681a; background: var(--bg-main); border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                    <h4 style="color: #d18d45; font-size: 1.15rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;">⚖️ Balance</h4>
+                    <ul class="ui-list" style="margin-left: 10px; color: var(--text-secondary);">
+                        <li><span style="color: #d18d45; font-weight: bold;">✔</span> Rendimientos masivos que rozan los 10 Gbps asíncronos.</li>
+                        <li><span style="color: #d18d45; font-weight: bold;">✔</span> Soberanía absoluta de perfiles y seguridad corporativa.</li>
+                        <li><span style="color: #d18d45; font-weight: bold;">✘</span> Confinada físicamente por la arquitectura del terreno.</li>
+                        <li><span style="color: #d18d45; font-weight: bold;">✘</span> Elevado coste de pasivos y tendido estructurado.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAN -->
+        <div class="content-block network-section">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem; flex-wrap: wrap;">
+                <span style="background: #253846; border: 1px solid #3c6e97; color: #e0e0e0; padding: 0.3rem 1rem; border-radius: 20px; font-weight: 600; font-family: 'Oswald', sans-serif; font-size: 0.9rem; letter-spacing: 0.5px;">🏙️ 5 A 50 KILÓMETROS</span>
+                <h2 style="margin: 0; font-size: 2rem; color: var(--text-primary); font-weight: 600; letter-spacing: -0.5px; border-bottom: none; padding-bottom: 0;">Red de Área Metropolitana <span style="color: #3c6e97; font-weight: 400;">(MAN)</span></h2>
+            </div>
+            
+            <p class="body-text" style="font-size: 1.05rem; line-height: 1.7; color: var(--text-secondary); max-width: 900px;">
+                La <strong>MAN</strong> entrelaza distritos y metrópolis. Es la gran arteria unificadora administrada por proveedores de telecomunicación civil que empalma sucursales gigantescas, transformando el asfalto en una carretera invisible y dinámica de luz.
+            </p>
+            
+            <div class="grid-cards" style="margin-top: 1.5rem;">
+                <div class="card" style="border-top: 2px solid #3c6e97; background: var(--bg-main); border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                    <h4 style="color: #6a9ac2; font-size: 1.15rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;">⚙️ Tecnologías Base</h4>
+                    <ul class="ui-list" style="margin-left: 10px; color: var(--text-secondary);">
+                        <li><strong>Metro Ethernet:</strong> Ethernet ruteado por postes y ductos en macro urbes.</li>
+                        <li><strong>Ductos Ópticos Propios:</strong> Troncales municipales sin atenuación.</li>
+                        <li><strong>WiMAX y Microondas:</strong> Las copas de los edificios convertidas en antenas de 50km.</li>
+                        <li><strong>SDH (Síncrona):</strong> Operación milimétrica de telecomunicadoras.</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-top: 2px solid #3c6e97; background: var(--bg-main); border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                    <h4 style="color: #6a9ac2; font-size: 1.15rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;">⚖️ Balance</h4>
+                    <ul class="ui-list" style="margin-left: 10px; color: var(--text-secondary);">
+                        <li><span style="color: #6a9ac2; font-weight: bold;">✔</span> Elimina barreras arquitectónicas de sedes fraccionadas.</li>
+                        <li><span style="color: #6a9ac2; font-weight: bold;">✔</span> Capacidades monstruosas contratables modularmente (Punto-a-Punto).</li>
+                        <li><span style="color: #6a9ac2; font-weight: bold;">✘</span> Infraestructura imposible para civiles (Monopolios ISP).</li>
+                        <li><span style="color: #6a9ac2; font-weight: bold;">✘</span> Cruza espacios citadinos expuestos a roturas físicas (accidentes).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- WAN -->
+        <div class="content-block network-section">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem; flex-wrap: wrap;">
+                <span style="background: #253a26; border: 1px solid #4a784c; color: #e0e0e0; padding: 0.3rem 1rem; border-radius: 20px; font-weight: 600; font-family: 'Oswald', sans-serif; font-size: 0.9rem; letter-spacing: 0.5px;">🌍 NACIONAL / GLOBAL</span>
+                <h2 style="margin: 0; font-size: 2rem; color: var(--text-primary); font-weight: 600; letter-spacing: -0.5px; border-bottom: none; padding-bottom: 0;">Red de Área Amplia <span style="color: #4a784c; font-weight: 400;">(WAN)</span></h2>
+            </div>
+            
+            <p class="body-text" style="font-size: 1.05rem; line-height: 1.7; color: var(--text-secondary); max-width: 900px;">
+                La <strong>WAN</strong> burla la geografía terrestre entera abrazando océanos enteros. Es el cerebro maestro materializado en millones de redes enlazadas entre sí. Internet encabeza el título de la WAN por excelencia global uniendo los cinco continentes.
+            </p>
+            
+            <div class="grid-cards" style="margin-top: 1.5rem;">
+                <div class="card" style="border-top: 2px solid #4a784c; background: var(--bg-main); border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                    <h4 style="color: #79a67a; font-size: 1.15rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;">⚙️ Tecnologías Base</h4>
+                    <ul class="ui-list" style="margin-left: 10px; color: var(--text-secondary);">
+                        <li><strong>Fosa Oceánica:</strong> Cientos de troncales submarinos gigantes operando con fotones.</li>
+                        <li><strong>Constelación Espacial:</strong> Satélites que irradian señal directamente a desiertos y montañas.</li>
+                        <li><strong>MPLS / SD-WAN corporativa:</strong> Etiquetas precisas y software avanzado para multinacionales.</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-top: 2px solid #4a784c; background: var(--bg-main); border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                    <h4 style="color: #79a67a; font-size: 1.15rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;">⚖️ Balance</h4>
+                    <ul class="ui-list" style="margin-left: 10px; color: var(--text-secondary);">
+                        <li><span style="color: #79a67a; font-weight: bold;">✔</span> Derriba para siempre cualquier barrera fronteriza institucional.</li>
+                        <li><span style="color: #79a67a; font-weight: bold;">✔</span> Faculta a la sociedad la existencia del ecosistema de Nube.</li>
+                        <li><span style="color: #79a67a; font-weight: bold;">✘</span> Latencia amarrada inmutablemente a las leyes de la física (Ping).</li>
+                        <li><span style="color: #79a67a; font-weight: bold;">✘</span> Focos complejos frente a las ciberguerras y jurisdicciones inabarcables.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comparativa General y Conclusión -->
+        <div class="content-block">
+            <h2 style="font-size: 2rem; color: var(--text-dark); margin-bottom: 1.5rem; font-family: 'Oswald', sans-serif;">La Progresión del Ecosistema Digital</h2>
+            <p class="body-text" style="font-size: 1.15rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto; line-height: 1.8;">
+                Nuestra interacción tecnológica escala por capas absolutas: La <strong>PAN</strong> define nuestro espacio privado inmediato; la <strong>LAN</strong> articula el corazón productivo de nuestros hogares y edificios; la <strong>MAN</strong> inyecta vida ininterrumpida a todo el latir de una urbe; y sorpresivamente la <strong>WAN</strong>, difuminando continentes, crea ese enorme mar oceánico interconectado que sustenta a toda la civilización moderna de la información.
+            </p>
+        </div>
+    </main>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            document.getElementById('progressFill').style.width = progress + '%';
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes de Computadoras | Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesinicio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@300;400;500&family=Oswald:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="sidebar-top">
+            <div class="logo">REDES<span>.</span></div>
+            <div class="nav-label">Fundamentos</div>
+            <ul class="nav-links">
+                <li><a href="inicio.html" class="active">Inicio</a></li>
+                <li><a href="alcance.html">Alcance PAN-WAN</a></li>
+            </ul>
+            <div class="nav-label">Tecnología</div>
+            <ul class="nav-links">
+                <li><a href="topologia.html">Topologías</a></li>
+                <li><a href="infraestructura.html">Infraestructura</a></li>
+                <li><a href="modelos.html">Modelo OSI</a></li>
+            </ul>
+        </div>
+        <div class="sidebar-firma">
+            <p class="text-secondary">OscarDQ</p>
+        </div>
+    </nav>
+
+    <main class="content">
+        <header class="top-bar">
+            <span class="page-title">DEFINICION Y ORIGENES DE LAS REDES</span>
+        </header>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <!-- Definición de redes -->
+        <div class="content-block network-section">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem; flex-wrap: wrap;">
+                <span style="background: #3a3f58; border: 1px solid #6c76a3; color: #e0e0e0; padding: 0.3rem 1rem; border-radius: 20px; font-weight: 600; font-family: 'Oswald', sans-serif; font-size: 0.9rem; letter-spacing: 0.5px;">📚 CONCEPTOS BÁSICOS</span>
+                <h2 style="margin: 0; font-size: 2rem; color: var(--text-primary); font-weight: 600; letter-spacing: -0.5px; border-bottom: none; padding-bottom: 0;">Definición y Propósito</h2>
+            </div>
+            
+            <p class="body-text" style="font-size: 1.05rem; line-height: 1.7; color: var(--text-secondary); max-width: 900px; margin-bottom: 1.5rem;">
+                Una <strong>red informática</strong> es un conjunto de dispositivos electrónicos interconectados. Su propósito fundamental es compartir recursos, intercambiar datos y facilitar la comunicación humana y artificial.
+            </p>
+            
+            <div class="grid-cards">
+                <div class="card" style="border-top: 2px solid #5c6bc0; background: var(--bg-main); border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    <h4 style="color: #8c9eff; font-size: 1.15rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;">💻 Dispositivos Comunes</h4>
+                    <ul class="ui-list" style="margin-left: 10px; color: var(--text-secondary);">
+                        <li><strong>Computadoras:</strong> Equipos y servidores corporativos.</li>
+                        <li><strong>Periféricos:</strong> Impresoras y escáneres de red.</li>
+                        <li><strong>Móviles:</strong> Teléfonos y tablets.</li>
+                        <li><strong>IoT:</strong> Sensores y domótica inteligente.</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-top: 2px solid #5c6bc0; background: var(--bg-main); border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    <h4 style="color: #8c9eff; font-size: 1.15rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;">🛡️ Reglas y Protocolos</h4>
+                    <p class="body-text" style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                        Para interactuar, usan <strong>protocolos estandarizados</strong> (e.g. TCP/IP) predefiniendo cómo la información viaja de manera ordenada y segura, sin importar en lo absoluto el continente hacia el que vaya el destino.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Orígenes de las redes -->
+        <div class="content-block network-section">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem; flex-wrap: wrap;">
+                <span style="background: #4a3a18; border: 1px solid #b38522; color: #e0e0e0; padding: 0.3rem 1rem; border-radius: 20px; font-weight: 600; font-family: 'Oswald', sans-serif; font-size: 0.9rem; letter-spacing: 0.5px;">⏳ HISTORIA Y EVOLUCIÓN</span>
+                <h2 style="margin: 0; font-size: 2rem; color: var(--text-primary); font-weight: 600; letter-spacing: -0.5px; border-bottom: none; padding-bottom: 0;">Orígenes de las Redes</h2>
+            </div>
+            
+            <p class="body-text" style="font-size: 1.05rem; line-height: 1.7; color: var(--text-secondary); max-width: 900px; margin-bottom: 2rem;">
+                La historia tiene sus raíces en la Guerra Fría. Para evitar que un ataque nuclear destruyera las redes de mando unificadas, la agencia DARPA financió un sistema de comunicaciones descentralizado; el abuelo de Internet.
+            </p>
+            
+            <div class="timeline" style="margin-top: 1.5rem; border-left: 2px solid #555; padding-left: 1.5rem; margin-left: 1rem;">
+                <div class="timeline-item" style="margin-bottom: 1.5rem; position: relative;">
+                    <div style="position: absolute; left: -2.05rem; top: 4px; background: #b38522; width: 10px; height: 10px; border-radius: 50%;"></div>
+                    <span class="timeline-date" style="color: #dcb354; font-weight: 600; font-size: 1.05rem; display: block; margin-bottom: 0.3rem;">1969 — El nacimiento de ARPANET</span>
+                    <div class="timeline-content" style="color: var(--text-secondary); line-height: 1.6; background: var(--bg-main); padding: 1rem; border-radius: 6px; border: 1px solid var(--border);">
+                        <div class="timeline-row">
+                            <p style="margin: 0;">Financiada por DARPA, nace la precursora directa de Internet, conectando nodos universitarios. Su primer mensaje transmitido fue "LOGIN" (aunque inicialmente colapsó en la o: "LO").</p>
+                            <div class="timeline-img-wrapper">
+                                <img src="images/arpanet.png" alt="ARPANET" class="timeline-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" style="margin-bottom: 1.5rem; position: relative;">
+                    <div style="position: absolute; left: -2.05rem; top: 4px; background: #b38522; width: 10px; height: 10px; border-radius: 50%;"></div>
+                    <span class="timeline-date" style="color: #dcb354; font-weight: 600; font-size: 1.05rem; display: block; margin-bottom: 0.3rem;">1974 — Protocolos universales</span>
+                    <div class="timeline-content" style="color: var(--text-secondary); line-height: 1.6; background: var(--bg-main); padding: 1rem; border-radius: 6px; border: 1px solid var(--border);">
+                        <div class="timeline-row">
+                            <p style="margin: 0;">Vint Cerf y Bob Kahn publicaron el protocolo TCP/IP, resolviendo un enigma inabarcable: de qué forma intercomunicar el software y hardware de diferentes empresas privadas.</p>
+                            <div class="timeline-img-group">
+                                <div class="timeline-img-wrapper">
+                                    <img src="images/vintCerf.png" alt="Vint Cerf" class="timeline-img">
+                                    <span class="timeline-img-label">Vint Cerf</span>
+                                </div>
+                                <div class="timeline-img-wrapper">
+                                    <img src="images/robertKahn.png" alt="Robert Kahn" class="timeline-img">
+                                    <span class="timeline-img-label">Bob Kahn</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" style="margin-bottom: 1.5rem; position: relative;">
+                    <div style="position: absolute; left: -2.05rem; top: 4px; background: #b38522; width: 10px; height: 10px; border-radius: 50%;"></div>
+                    <span class="timeline-date" style="color: #dcb354; font-weight: 600; font-size: 1.05rem; display: block; margin-bottom: 0.3rem;">1986 — NSFNET en universidades</span>
+                    <div class="timeline-content" style="color: var(--text-secondary); line-height: 1.6; background: var(--bg-main); padding: 1rem; border-radius: 6px; border: 1px solid var(--border);">Un enlace permanente de alta velocidad conectó de manera robusta todos los centros neurálgicos universitarios, sellando la separación del uso exclusivo militar.</div>
+                </div>
+                <div class="timeline-item" style="position: relative;">
+                    <div style="position: absolute; left: -2.05rem; top: 4px; background: #b38522; width: 10px; height: 10px; border-radius: 50%;"></div>
+                    <span class="timeline-date" style="color: #dcb354; font-weight: 600; font-size: 1.05rem; display: block; margin-bottom: 0.3rem;">1991 — La anhelada World Wide Web</span>
+                    <div class="timeline-content" style="color: var(--text-secondary); line-height: 1.6; background: var(--bg-main); padding: 1rem; border-radius: 6px; border: 1px solid var(--border);">
+                        <div class="timeline-row">
+                            <p style="margin: 0;">Tim Berners-Lee inventó en el CERN la WWW desarrollando tres piezas maestras: HTML, HTTP y URL. El navegador Mosaic abriría estas maravillas a los civiles a nivel masivo.</p>
+                            <div class="timeline-img-wrapper">
+                                <img src="images/www.png" alt="World Wide Web" class="timeline-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hacia el Internet Moderno -->
+        <div class="content-block network-section">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem; flex-wrap: wrap;">
+                <span style="background: #472130; border: 1px solid #a3325e; color: #e0e0e0; padding: 0.3rem 1rem; border-radius: 20px; font-weight: 600; font-family: 'Oswald', sans-serif; font-size: 0.9rem; letter-spacing: 0.5px;">🚀 PRESENTE Y FUTURO</span>
+                <h2 style="margin: 0; font-size: 2rem; color: var(--text-primary); font-weight: 600; letter-spacing: -0.5px; border-bottom: none; padding-bottom: 0;">Hacia el Internet Moderno</h2>
+            </div>
+            
+            <p class="body-text" style="font-size: 1.05rem; line-height: 1.7; color: var(--text-secondary); max-width: 900px; margin-bottom: 1.5rem;">
+                Desde aquellos pioneros hasta la actualidad, Internet conecta a más de <strong>cinco mil millones</strong> de personas. Y con la llegada de billones de sensores automatizados, hoy estas son las fuerzas que continúan ensanchando la red:
+            </p>
+
+            <div class="grid-cards">
+                <div class="card" style="border-top: 2px solid #555; background: var(--bg-main); border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    <h4 style="color: var(--text-primary); font-size: 1.1rem; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 8px;">🌐 Internet de las Cosas</h4>
+                    <p class="text-secondary" style="margin: 0; line-height: 1.6; font-size: 0.95rem;">Miles de millones de dispositivos cotidianos conectados recopilando y compartiendo datos de forma invisible sin interrupción.</p>
+                </div>
+                <div class="card" style="border-top: 2px solid #555; background: var(--bg-main); border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    <h4 style="color: var(--text-primary); font-size: 1.1rem; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 8px;">📶 Conectividad 5G</h4>
+                    <p class="text-secondary" style="margin: 0; line-height: 1.6; font-size: 0.95rem;">Redes móviles de nueva generación con latencia minúscula (milisegundos) para operar entornos o máquinas críticas.</p>
+                </div>
+                <div class="card" style="border-top: 2px solid #555; background: var(--bg-main); border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    <h4 style="color: var(--text-primary); font-size: 1.1rem; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 8px;">☁️ Cómputo Nube</h4>
+                    <p class="text-secondary" style="margin: 0; line-height: 1.6; font-size: 0.95rem;">Desplazamiento real del almacenamiento hacia colosales centros de datos a los que todos acudimos al unísono.</p>
+                </div>
+                <div class="card" style="border-top: 2px solid #555; background: var(--bg-main); border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    <h4 style="color: var(--text-primary); font-size: 1.1rem; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 8px;">🤖 Inteligencia Artificial</h4>
+                    <p class="text-secondary" style="margin: 0; line-height: 1.6; font-size: 0.95rem;">Mentes de software para defender, priorizar y enrutar el inimaginable gran volumen de datos contemporáneo en la luz.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            document.getElementById('progressFill').style.width = progress + '%';
+        });
+    </script>
+
+</body>
+</html>

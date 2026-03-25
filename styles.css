@@ -1,0 +1,527 @@
+/* ===================== SISTEMA DE DISEÑO GLOBAL (VARIABLES) ===================== */
+:root {
+    /* Backgrounds */
+    --bg-main: #1e1e1e;
+    --bg-sidebar: #222224;
+    --bg-card: #27272a;
+    --bg-hover: #2d2d30;
+    
+    /* Acentos y Bordes */
+    --accent: #f9826c;
+    --border: #333333;
+    
+    /* Jerarquía de Texto (Alto Contraste) */
+    --text-primary: #ffffff;
+    --text-secondary: #cccccce8;
+    --text-muted: #afafaf83;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-weight: 300; 
+    line-height: 1.6;
+    display: flex;
+}
+
+/* ===================== ESCALA TIPOGRÁFICA STRICTA ===================== */
+h1, .page-title-banner {
+    font-family: 'Oswald', sans-serif;
+    color: var(--text-primary);
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+}
+
+h3 {
+    font-family: 'Inter', sans-serif;
+    color: var(--accent); /* Accent for specific deep highlights */
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+h4 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+p.body-text, p {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 850px; /* Evitar líneas infinitas ilegibles */
+}
+
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-muted, small, .caption { 
+    color: var(--text-muted); 
+    font-size: 0.85rem; 
+}
+
+/* ===================== ESPACIANTE (SPACERS) ===================== */
+.spacer-sm { height: 20px; }
+.spacer-md { height: 40px; }
+.spacer-lg { height: 80px; }
+
+/* ===================== SEPARADORES (DIVIDERS) ===================== */
+.divider-thin {
+    border-top: 1px solid var(--border);
+    margin: 24px 0;
+    width: 100%;
+}
+
+.divider-thick {
+    border-top: 3px solid var(--border);
+    margin: 48px 0;
+    width: 100%;
+}
+
+/* ===================== SIDEBAR (240px) ===================== */
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    background-color: var(--bg-sidebar);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 24px;
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 200;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+    color: var(--text-primary);
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.logo span { color: var(--accent); }
+
+.nav-links { list-style: none; padding: 0; }
+
+.nav-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 1.5px;
+    margin: 24px 0 12px 10px;
+    font-weight: 600;
+}
+
+.nav-links li { margin-bottom: 8px; }
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    padding: 12px 16px;
+    display: block;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+.nav-links a:hover {
+    background-color: var(--bg-hover);
+    color: var(--text-primary);
+    transform: translateX(4px);
+}
+
+.nav-links a.active {
+    color: #fff;
+    background-color: var(--accent);
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(249, 130, 108, 0.25);
+}
+
+.sidebar-firma {
+    font-size: 0.5rem;
+    color: var(--text-muted);
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/* ===================== BARRA SUPERIOR (TOPBAR) ===================== */
+.top-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(30, 30, 30, 0.95);
+    backdrop-filter: blur(8px);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--border);
+    width: calc(100vw - 240px);
+    margin-left: -50px;
+    margin-top: -50px;
+}
+
+.top-bar .page-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600; 
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+.progress-bar {
+    position: sticky;
+    top: 70px;
+    z-index: 99;
+    width: calc(100vw - 240px);
+    margin-left: -50px;
+    height: 2px;
+    background-color: transparent;
+}
+
+.progress-bar .progress-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--accent);
+    transition: width 0.1s linear;
+}
+
+/* ===================== CONTENIDO PRINCIPAL ===================== */
+.content {
+    margin-left: 240px;
+    padding: 50px;
+    width: calc(100vw - 240px);
+}
+
+/* ===================== COMPONENTES REUTILIZABLES (UI) ===================== */
+
+/* Contenedor principal de secciones */
+.seccion {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 0; /* Mayor whitespace global */
+}
+
+/* Bloque neutro de contenido */
+.content-block {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+/* Caja de alerta/info destacada (Highlight) */
+.info-box {
+    background-color: var(--bg-card);
+    border-left: 4px solid var(--accent);
+    padding: 24px 30px;
+    margin: 30px 0;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.info-box p:last-child { margin-bottom: 0; }
+
+/* Grid Cards Reutilizables */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-color: var(--accent);
+}
+
+.card h4 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* Listas UI mejoradas */
+ul.ui-list, .seccion ul {
+    list-style-type: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+ul.ui-list li, .seccion ul li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+ul.ui-list li::before, .seccion ul li::before {
+    content: "■"; /* Marcador sólido moderno */
+    color: var(--border); /* Neutral instead of heavy accent */
+    position: absolute;
+    left: 0;
+    top: -1px;
+    font-size: 0.9rem;
+}
+
+/* Contenedor Multimedia */
+.media-container {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.media-container img, .media-container video {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+/* Timeline (Modificado para usar colores neutros y no saturar) */
+.timeline {
+    border-left: 2px solid var(--border);
+    padding-left: 30px;
+    margin: 40px 0 40px 10px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+.timeline-item:last-child { margin-bottom: 0; }
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -37px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--bg-main);
+    border: 2px solid var(--text-secondary); /* Removido el accent masivo */
+    border-radius: 50%;
+}
+
+.timeline-date {
+    font-family: 'Oswald', sans-serif;
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+    display: block;
+    letter-spacing: 1px;
+}
+
+.page-title-banner {
+    font-family: 'Oswald', sans-serif;
+    color: var(--text-primary);
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.page-title-banner::before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 36px;
+    background: var(--accent);
+    border-radius: 4px;
+}
+
+/* ===================== SEPARADORES (DIVIDERS) ===================== */
+.divider-thin {
+    border-top: 1px solid var(--border);
+    margin: 24px 0;
+    width: 100%;
+}
+
+.divider-thick {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent) 0%, transparent 80%);
+    opacity: 0.5;
+    margin: 48px 0;
+    width: 100%;
+}
+
+/* ===================== ESTILOS CORPORATIVOS (TECNOLOGÍAS) ===================== */
+.content-corporate {
+    background-color: transparent;
+    border: none;
+    border-left: 1px solid var(--border);
+    border-radius: 0;
+    padding: 10px 0 10px 24px;
+    margin-bottom: 40px;
+}
+
+.card-corporate {
+    background-color: #1f2023;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 24px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-corporate::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #42a5f5, #66bb6a);
+    opacity: 0.6;
+}
+
+.card-corporate:hover {
+    border-color: #555;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.card-corporate:hover::after {
+    opacity: 1;
+}
+
+.card-corporate h4 {
+    text-transform: uppercase;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.card-corporate p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.tech-header {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 3.5rem 0 1.5rem 0;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid rgba(249, 130, 108, 0.15);
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+}
+
+.tech-header::before {
+    content: '❯';
+    color: var(--accent);
+    font-size: 1.8rem;
+    margin-right: 14px;
+    transform: translateY(-2px);
+    opacity: 0.8;
+}
+
+.tech-sub-header {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--accent);
+    margin: 2.5rem 0 1.2rem 0;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.tech-sub-header::before {
+    content: '■';
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    transform: translateY(-1px);
+}
+
+.tech-sub-header::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(249, 130, 108, 0.3), transparent);
+}
+
+.tech-item-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 2rem 0 0.8rem 0;
+    border-left: 3px solid var(--accent);
+    background: linear-gradient(90deg, rgba(249,130,108,0.08) 0%, transparent 100%);
+    padding: 6px 16px;
+    border-radius: 0 4px 4px 0;
+    display: table;
+}

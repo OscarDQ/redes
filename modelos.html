@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes de Computadoras | Modelos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesmodelos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@300;400;500&family=Oswald:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="sidebar-top">
+            <div class="logo">REDES<span>.</span></div>
+            <div class="nav-label">Fundamentos</div>
+            <ul class="nav-links">
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="alcance.html">Alcance PAN-WAN</a></li>
+            </ul>
+            <div class="nav-label">Tecnología</div>
+            <ul class="nav-links">
+                <li><a href="topologia.html">Topologías</a></li>
+                <li><a href="infraestructura.html">Infraestructura</a></li>
+                <li><a href="modelos.html" class="active">Modelo OSI</a></li>
+            </ul>
+        </div>
+        <div class="sidebar-firma">
+            <p class="text-secondary">OscarDQ</p>
+        </div>
+    </nav>
+
+    <main class="content">
+        <header class="top-bar">
+            <span class="page-title">Modelos de Red</span>
+        </header>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <section class="seccion">
+            <h1 class="page-title-banner">Modelos de Red</h1>
+            <h2 class="tech-header">Modelos de Referencia: OSI y TCP/IP</h2>
+            <p>Para que millones de dispositivos de distintos fabricantes puedan comunicarse a través de Internet, es necesario establecer un conjunto de reglas y estándares universales.</p>
+            <div class="info-box" style="border-left-color: #444; background: transparent; box-shadow: none; border: 1px solid var(--border);">
+                <p><strong>Propósito:</strong> Los modelos de red organizan y estandarizan la transmisión de datos dividiéndola en capas independientes, facilitando el diagnóstico de fallos y la interoperabilidad entre fabricantes.</p>
+            </div>
+            
+            <h3 class="tech-sub-header">El Concepto General: Encapsulamiento (PDU)</h3>
+            <p>El <strong>encapsulamiento</strong> es el proceso mediante el cual cada capa añade una cabecera de control al mensaje antes de pasarlo a la capa inferior, hasta convertirlo en señales físicas transmisibles.</p>
+            
+            <div class="grid-cards" style="margin-top: 25px;">
+                <div class="card-corporate">
+                    <h4>Segmento</h4>
+                    <p>El mensaje se divide en fragmentos y se asignan los puertos lógicos de origen y destino.</p>
+                </div>
+                <div class="card-corporate">
+                    <h4>Paquete</h4>
+                    <p>Se añaden las direcciones IP de origen y destino para el enrutamiento global.</p>
+                </div>
+                <div class="card-corporate">
+                    <h4>Trama (Frame)</h4>
+                    <p>Se incorpora la dirección MAC física del dispositivo para la entrega local.</p>
+                </div>
+                <div class="card-corporate">
+                    <h4>Pulsos Puros</h4>
+                    <p>El conjunto de datos se convierte en impulsos eléctricos o ópticos transmitidos por el medio físico.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion" style="margin-top: 50px;">
+            <h2 style="font-size: 2.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Modelo OSI</h2>
+            <p style="font-size: 1.2rem; font-weight: 300; color: #a0a0a0; margin-bottom: 35px; border-bottom: 1px solid #333; padding-bottom: 15px;">El Estándar Teórico Universal de Interconexión</p>
+            
+            <div class="grid-cards" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 20px;">
+                <div class="card-corporate">
+                    <h4 style="color: var(--text-color); font-size: 1.1rem; margin-bottom: 8px;">¿Qué es?</h4>
+                    <p style="color: #b0b0b0; font-size: 0.95rem; margin: 0; line-height: 1.4;">Marco conceptual creado por la ISO en 1984 para estandarizar la intercomunicación entre dispositivos de distintos fabricantes.</p>
+                </div>
+                <div class="card-corporate">
+                    <h4 style="color: var(--text-color); font-size: 1.1rem; margin-bottom: 8px;">¿Qué hace?</h4>
+                    <p style="color: #b0b0b0; font-size: 0.95rem; margin: 0; line-height: 1.4;">Divide la transmisión de datos en siete capas independientes, cada una con una función específica y bien definida.</p>
+                </div>
+                <div class="card-corporate">
+                    <h4 style="color: var(--text-color); font-size: 1.1rem; margin-bottom: 8px;">Ventaja Clave</h4>
+                    <p style="color: #b0b0b0; font-size: 0.95rem; margin: 0; line-height: 1.4;">El aislamiento por capas permite identificar y corregir fallos sin afectar el resto del sistema.</p>
+                </div>
+            </div>
+
+            <div class="info-box" style="margin-bottom: 25px; border-left-color: #444; background: transparent; box-shadow: none; border: 1px solid var(--border);">
+                <p><strong>Regla mnemotécnica (de abajo a arriba):</strong> <em>"FERTSPA"</em> → <strong>F</strong>ísica, <strong>E</strong>nlace, <strong>R</strong>ed, <strong>T</strong>ransporte, <strong>S</strong>esión, <strong>P</strong>resentación, <strong>A</strong>plicación. Memoriza este acrónimo para dominar el modelo OSI de inmediato.</p>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 15px; margin-top: 30px;">
+                <!-- Capa 7 -->
+                <div class="content-block" style="margin-top:0;">
+                    <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 6px;">
+                        <span style="font-size: 1.8rem; font-weight: 800; color: #f9826c;">7</span>
+                        <h4 style="font-size: 1.3rem; margin: 0; color: #f9826c; letter-spacing: 0.5px;">APLICACIÓN <span style="font-weight: 300; font-size: 1rem; color: #888;">— Interfaz Humana</span></h4>
+                    </div>
+                    <p style="color: #a0a0a0; font-size: 0.95rem; line-height: 1.5; margin: 0 0 10px 0;">Constituye la interfaz directa entre las aplicaciones del usuario y la red. Permite a los programas acceder a los servicios de red.</p>
+                    <p style="color: #666; font-size: 0.85rem; margin: 0; font-style: italic;">Ejemplos: HTTP, FTP, SMTP, DNS</p>
+                </div>
+                <!-- Capa 6 -->
+                <div class="content-block" style="margin-top:0;">
+                    <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 6px;">
+                        <span style="font-size: 1.8rem; font-weight: 800; color: #f9826c;">6</span>
+                        <h4 style="font-size: 1.3rem; margin: 0; color: #f9826c; letter-spacing: 0.5px;">PRESENTACIÓN <span style="font-weight: 300; font-size: 1rem; color: #888;">— Traductor Criptográfico</span></h4>
+                    </div>
+                    <p style="color: #a0a0a0; font-size: 0.95rem; line-height: 1.5; margin: 0 0 10px 0;">Garantiza la compatibilidad del formato de datos entre sistemas distintos. Gestiona el cifrado, la compresión y la conversión de formatos.</p>
+                    <p style="color: #666; font-size: 0.85rem; margin: 0; font-style: italic;">Ejemplos: SSL, TLS, JPEG</p>
+                </div>
+                <!-- Capa 5 -->
+                <div class="content-block" style="margin-top:0;">
+                    <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 6px;">
+                        <span style="font-size: 1.8rem; font-weight: 800; color: #f9826c;">5</span>
+                        <h4 style="font-size: 1.3rem; margin: 0; color: #f9826c; letter-spacing: 0.5px;">SESIÓN <span style="font-weight: 300; font-size: 1rem; color: #888;">— Moderador Inmortal</span></h4>
+                    </div>
+                    <p style="color: #a0a0a0; font-size: 0.95rem; line-height: 1.5; margin: 0 0 10px 0;">Establece, mantiene y finaliza las sesiones de comunicación entre aplicaciones, gestionando puntos de control para reanudar transferencias interrumpidas.</p>
+                    <p style="color: #666; font-size: 0.85rem; margin: 0; font-style: italic;">Ejemplos: NetBIOS, PPTP</p>
+                </div>
+                <!-- Capa 4 -->
+                <div class="content-block" style="margin-top:0;">
+                    <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 6px;">
+                        <span style="font-size: 1.8rem; font-weight: 800; color: #f9826c;">4</span>
+                        <h4 style="font-size: 1.3rem; margin: 0; color: #f9826c; letter-spacing: 0.5px;">TRANSPORTE <span style="font-weight: 300; font-size: 1rem; color: #888;">— Logística a Escala</span></h4>
+                    </div>
+                    <p style="color: #a0a0a0; font-size: 0.95rem; line-height: 1.5; margin: 0 0 10px 0;">Gestiona el control de flujo y la fiabilidad de la entrega, segmentando los datos y verificando su recepción correcta.</p>
+                    <p style="color: #a0a0a0; font-size: 0.92rem; line-height: 1.5; margin: 0 0 10px 0;"><strong style="color: #fff;">TCP (Confiable):</strong> Exige acuse de recibo por cada segmento entregado. Si no hay confirmación (ACK), reenvía el dato. Lento pero con confianza 100%. Usado en correo, descarga de archivos, webpages.<br><strong style="color: #fff;">UDP (Veloz):</strong> Dispara los fragmentos sin confirmar recepción ni orden de llegada. Indispensable donde la latencia es crítica: videollamadas Zoom, disparos en videojuegos multijugador, streaming en vivo.</p>
+                    <p style="color: #666; font-size: 0.85rem; margin: 0; font-style: italic;">Ejemplos: Protocolos TCP, UDP</p>
+                </div>
+                <!-- Capa 3 -->
+                <div class="content-block" style="margin-top:0;">
+                    <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 6px;">
+                        <span style="font-size: 1.8rem; font-weight: 800; color: #f9826c;">3</span>
+                        <h4 style="font-size: 1.3rem; margin: 0; color: #f9826c; letter-spacing: 0.5px;">RED <span style="font-weight: 300; font-size: 1rem; color: #888;">— GPS del Planeta</span></h4>
+                    </div>
+                    <p style="color: #a0a0a0; font-size: 0.95rem; line-height: 1.5; margin: 0 0 10px 0;">Realiza el direccionamiento lógico mediante direcciones IP y calcula la ruta más eficiente para el envío de paquetes a través de la red global.</p>
+                    <p style="color: #666; font-size: 0.85rem; margin: 0; font-style: italic;">Ejemplos: Direcciones IP, Routers, BGP</p>
+                </div>
+                <!-- Capa 2 -->
+                <div class="content-block" style="margin-top:0;">
+                    <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 6px;">
+                        <span style="font-size: 1.8rem; font-weight: 800; color: #f9826c;">2</span>
+                        <h4 style="font-size: 1.3rem; margin: 0; color: #f9826c; letter-spacing: 0.5px;">ENLACE DE DATOS <span style="font-weight: 300; font-size: 1rem; color: #888;">— Agente Físico</span></h4>
+                    </div>
+                    <p style="color: #a0a0a0; font-size: 0.95rem; line-height: 1.5; margin: 0 0 10px 0;">Gestiona la transferencia confiable de datos entre nodos adyacentes mediante tramas, detectándolas colisiones y garantizando la entrega en la red local.</p>
+                    <p style="color: #666; font-size: 0.85rem; margin: 0; font-style: italic;">Ejemplos: MAC Address, Switches Ethernet</p>
+                </div>
+                <!-- Capa 1 -->
+                <div class="content-block" style="margin-top:0;">
+                    <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 6px;">
+                        <span style="font-size: 1.8rem; font-weight: 800; color: #f9826c;">1</span>
+                        <h4 style="font-size: 1.3rem; margin: 0; color: #f9826c; letter-spacing: 0.5px;">FÍSICA <span style="font-weight: 300; font-size: 1rem; color: #888;">— Cruda Maquinaria</span></h4>
+                    </div>
+                    <p style="color: #a0a0a0; font-size: 0.95rem; line-height: 1.5; margin: 0 0 10px 0;">Define los medios físicos de transmisión, convirtiendo los datos en señales eléctricas, ópticas o electromagnéticas según el tipo de canal.</p>
+                    <p style="color: #666; font-size: 0.85rem; margin: 0; font-style: italic;">Ejemplos: Cables UTP, Fibra Óptica, Hubs</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <h2 class="tech-header">Modelo Pragmático TCP/IP: La Ingeniería Militar</h2>
+            <p>El modelo TCP/IP es el protocolo de comunicaciones vigente en Internet. Fue desarrollado por encargo del Departamento de Defensa de los Estados Unidos (DARPA) durante la Guerra Fría, priorizando la resiliencia sobre la elegancia formal.</p>
+            <br>
+            <p><strong>Filosofía de supervivencia:</strong> El sistema fue diseñado para mantener la comunicación activa incluso ante la destrucción parcial de la infraestructura, condensando las funciones de red en cuatro capas operativas robustas.</p>
+
+            <div class="grid-cards" style="margin-top: 25px;">
+                <div class="card-corporate">
+                    <h4>Capa 4: Aplicación Neta</h4>
+                    <p>Agrupa las funciones de Aplicación, Presentación y Sesión del modelo OSI en una sola capa, donde operan los protocolos de la Web y los servicios de red (HTTP, HTTPS, FTP, DNS, SMTP).</p>
+                </div>
+                <div class="card-corporate">
+                    <h4>Capa 3: Transporte — Three-Way Handshake</h4>
+                    <p>Misma función que la Capa 4 de OSI. Aquí ocurre el famoso <strong>Three-Way Handshake de TCP</strong>: <em>(1) Cliente: "Hola, ¿me escuchas?" → (2) Servidor: "Sí, habla." → (3) Cliente: "Perfecto, allá voy."</em> Este apretón de manos de tres vías garantiza que la conexión está lista antes de enviar cualquier dato.</p>
+                </div>
+                <div class="card-corporate">
+                    <h4>Capa 2: Internet (IP)</h4>
+                    <p>Corazón de TCP/IP. Opera mediante el protocolo <strong>IP</strong>, dictando si la comunicación usa la clásica <strong>IPv4</strong> (direcciones de 32 bits, ~4 mil millones de direcciones) o la ilimitada <strong>IPv6</strong> (128 bits). Incluye comandos como <em>ping</em> (ICMP) para verificar si un nodo remoto está activo.</p>
+                </div>
+                <div class="card-corporate">
+                    <h4>Capa 1: Acceso Hostil o Físico Submarino</h4>
+                    <p>Integra las funciones del Enlace de Datos y la Capa Física del OSI. Controla el acceso al medio físico de transmisión, ya sea cableado o inalámbrico.</p>
+                </div>
+            </div>
+            
+            <h3 class="tech-sub-header">El brillante Tratamiento en Diagnósticos por Errores</h3>
+            <div class="info-box" style="border-left-color: #444; background: transparent; box-shadow: none; border: 1px solid var(--border);">
+                <p>El modelo OSI exigía verificaciones de errores en cada capa, lo que resultaba en mayor latencia. TCP/IP simplificó este proceso: <strong>la verificación de integridad se realiza únicamente en el destino final</strong>, eliminando comprobaciones intermedias. Esta decisión fue determinante para lograr la velocidad y escalabilidad que caracterizan al Internet actual.</p>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <h2 class="tech-header">Cuadro Comparativo Avanzado Profundo OSI vs TCP/IP</h2>
+            
+            <div style="overflow-x: auto; margin: 30px 0;">
+                <table style="width: 100%; border-collapse: collapse; text-align: left; background-color: var(--bg-sidebar); border-radius: 8px; overflow: hidden; border: 1px solid var(--border);">
+                    <thead>
+                        <tr style="background-color: var(--hover); color: var(--accent); font-family: 'Oswald', sans-serif;">
+                            <th style="padding: 12px 15px; border-bottom: 2px solid var(--accent); border-right: 1px solid var(--border);">Metodología Analizada</th>
+                            <th style="padding: 12px 15px; border-bottom: 2px solid var(--accent); border-right: 1px solid var(--border);">Teoricismo Estricto OSI</th>
+                            <th style="padding: 12px 15px; border-bottom: 2px solid var(--accent);">Pragmatismo Brutal TCP/IP</th>
+                        </tr>
+                    </thead>
+                    <tbody style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem;">
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 12px 15px; font-weight: bold; border-right: 1px solid var(--border);">Naturaleza Original</td><td style="padding: 12px 15px; border-right: 1px solid var(--border);">Modelo Estándar Teórico civil (ISO 1984).</td><td style="padding: 12px 15px; color: #ffb347; font-weight: bold;">Milicia de supervivencia armada en EE.UU.</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 12px 15px; font-weight: bold; border-right: 1px solid var(--border);">Renglón Capas</td><td style="padding: 12px 15px; border-right: 1px solid var(--border);">Siete (7) capas divididas metódicamente.</td><td style="padding: 12px 15px;">Cuatro (4) capas pesadas colapsadas de uso rápido.</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 12px 15px; font-weight: bold; border-right: 1px solid var(--border);">Orden Secuencial de Invención</td><td style="padding: 12px 15px; border-right: 1px solid var(--border);">La pura teoría técnica existió antes del software.</td><td style="padding: 12px 15px;">Se programó salvajemente y luego se abstrajo y documentó.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px 15px; font-weight: bold; border-right: 1px solid var(--border);">Conclusión de Uso Actual</td><td style="padding: 12px 15px; border-right: 1px solid var(--border);">Referencia magistral para docentes y aislar errores precisos.</td><td style="padding: 12px 15px; color: var(--accent); font-weight: bold;">Implementado permanentemente para hacer funcionar toda la web actual.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            document.getElementById('progressFill').style.width = progress + '%';
+        });
+    </script>
+
+</body>
+</html>
