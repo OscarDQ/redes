@@ -80,7 +80,7 @@ p.body-text, p {
     font-size: 1rem;
     line-height: 1.7;
     margin-bottom: 20px;
-    max-width: 850px; /* Evitar líneas infinitas ilegibles */
+    max-width: 100%; /* Adaptativo al ancho del contenedor */
 }
 
 .text-primary { color: var(--text-primary); }
@@ -173,10 +173,21 @@ p.body-text, p {
 }
 
 .sidebar-firma {
-    font-size: 0.5rem;
+    font-size: 1rem;
     color: var(--text-muted);
     text-align: center;
     padding-bottom: 10px;
+}
+
+.firma-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+.firma-link:hover {
+    color: var(--text-primary);
 }
 
 /* ===================== BARRA SUPERIOR (TOPBAR) ===================== */
@@ -524,4 +535,56 @@ ul.ui-list li::before, .seccion ul li::before {
     padding: 6px 16px;
     border-radius: 0 4px 4px 0;
     display: table;
+}
+
+/* ===================== RESPONSIVE / ADAPTATIVO ===================== */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1024px) {
+    .sidebar {
+        display: none;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+        padding: 30px;
+    }
+
+    .top-bar {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .progress-bar {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .seccion {
+        max-width: 100%;
+    }
+}
+
+/* Móviles y pantallas pequeñas */
+@media (max-width: 768px) {
+    .content {
+        padding: 20px 16px;
+    }
+
+    h1, .page-title-banner {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .page-title-banner {
+        font-size: 2rem;
+    }
+
+    .grid-cards {
+        grid-template-columns: 1fr;
+    }
 }

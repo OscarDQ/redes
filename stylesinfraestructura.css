@@ -1,0 +1,47 @@
+/* ── Infrastructure Two-Column Layout (same pattern as topologia) ── */
+.infra-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    margin: 16px 0 20px 0;
+}
+
+.infra-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.infra-img-wrapper {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infra-img {
+    width: 260px;
+    height: 210px;
+    object-fit: contain;
+    background: linear-gradient(135deg, #1e1e24 0%, #2a2a32 100%);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.infra-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 768px) {
+    .infra-row {
+        flex-direction: column;
+    }
+
+    .infra-img {
+        width: 230px;
+        height: 190px;
+    }
+}

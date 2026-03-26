@@ -1,7 +1,7 @@
 /* ── Topology Two-Column Layout ── */
 .topology-row {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 32px;
     margin: 16px 0 20px 0;
 }
@@ -19,8 +19,8 @@
 }
 
 .topology-img {
-    width: 240px;
-    height: 200px;
+    width: 260px;
+    height: 210px;
     object-fit: contain;
     background: linear-gradient(135deg, #1e1e24 0%, #2a2a32 100%);
     border: 1px solid var(--border);
@@ -41,7 +41,7 @@
     }
 
     .topology-img {
-        width: 220px;
-        height: 180px;
+        width: 230px;
+        height: 190px;
     }
 }
