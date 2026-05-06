@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes de Computadoras | Cable de Par Trenzado</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylespartrenzado.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@300;400;500&family=Oswald:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="sidebar-top">
+            <div class="logo">REDES<span>.</span></div>
+            <div class="nav-label">Fundamentos</div>
+            <ul class="nav-links">
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="alcance.html">Alcance PAN-WAN</a></li>
+            </ul>
+            <div class="nav-label">Tecnología</div>
+            <ul class="nav-links">
+                <li><a href="topologia.html">Topologías</a></li>
+                <li><a href="infraestructura.html">Infraestructura</a></li>
+                <li><a href="modelos.html">Modelo OSI</a></li>
+            </ul>
+            <div class="nav-label">Guías</div>
+            <ul class="nav-links">
+                <li><a href="partrenzado.html" class="active">Par Trenzado</a></li>
+            </ul>
+            <div class="nav-label">Extras</div>
+            <ul class="nav-links">
+                <li><a href="actividades.html">Actividades</a></li>
+            </ul>
+        </div>
+        <div class="sidebar-firma">
+            <a href="https://github.com/OscarDQ" target="_blank" class="firma-link">OscarDQ</a>
+        </div>
+    </nav>
+
+    <main class="content">
+        <header class="top-bar">
+            <span class="page-title">GUÍA COMPLETA — CABLE DE PAR TRENZADO</span>
+        </header>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <h1 class="page-title-banner">Cable de Par Trenzado</h1>
+
+        <!-- Hero Section -->
+        <div class="pt-hero">
+            <div class="pt-hero-content">
+                <div class="pt-hero-text">
+                    <h2>El cable más usado del mundo</h2>
+                    <p class="pt-subtitle">Ethernet · RJ-45 · UTP/STP · Cobre trenzado</p>
+                    <p>El cable de par trenzado es el medio de transmisión guiado más utilizado en redes de área local (LAN) en todo el planeta. Está compuesto por pares de hilos de cobre aislados individualmente y entrelazados en espiral entre sí para reducir la interferencia electromagnética y la diafonía (crosstalk).</p>
+                </div>
+                <img src="images/par_trenzado.png" alt="Cable de par trenzado" class="pt-hero-img">
+            </div>
+        </div>
+
+        <!-- Otros Nombres -->
+        <div class="content-block">
+            <h2 class="tech-header">¿Cómo se le conoce?</h2>
+            <p class="body-text">El cable de par trenzado recibe múltiples nombres según el contexto, la región o el ámbito técnico:</p>
+            <div class="pt-names">
+                <span class="pt-name-badge">Cable Ethernet</span>
+                <span class="pt-name-badge">Cable de red</span>
+                <span class="pt-name-badge">Cable UTP</span>
+                <span class="pt-name-badge">Cable STP</span>
+                <span class="pt-name-badge">Cable RJ-45</span>
+                <span class="pt-name-badge">Cable LAN</span>
+                <span class="pt-name-badge">Twisted Pair</span>
+                <span class="pt-name-badge">Cable Cat5 / Cat6</span>
+                <span class="pt-name-badge">Patch cord</span>
+                <span class="pt-name-badge">Cable de parcheo</span>
+                <span class="pt-name-badge">Cable de datos</span>
+            </div>
+        </div>
+
+        <div class="divider-thin"></div>
+
+        <!-- Especificaciones Técnicas -->
+        <h2 class="tech-header">Especificaciones Técnicas</h2>
+        <div class="content-block">
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <span class="spec-icon">⚡</span>
+                    <div class="spec-label">Velocidad máxima</div>
+                    <div class="spec-value">40 Gbps</div>
+                    <div class="spec-detail">Cat8 — en centros de datos</div>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-icon">📏</span>
+                    <div class="spec-label">Alcance máximo</div>
+                    <div class="spec-value">100 metros</div>
+                    <div class="spec-detail">Por segmento (estándar IEEE)</div>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-icon">💰</span>
+                    <div class="spec-label">Costo aprox.</div>
+                    <div class="spec-value">$2 – $15 MXN/m</div>
+                    <div class="spec-detail">Según categoría y blindaje</div>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-icon">🔌</span>
+                    <div class="spec-label">Conector</div>
+                    <div class="spec-value">RJ-45</div>
+                    <div class="spec-detail">8 pines · 8P8C</div>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-icon">🧵</span>
+                    <div class="spec-label">Hilos internos</div>
+                    <div class="spec-value">8 hilos (4 pares)</div>
+                    <div class="spec-detail">Trenzados entre sí</div>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-icon">📡</span>
+                    <div class="spec-label">Frecuencia</div>
+                    <div class="spec-value">Hasta 2 GHz</div>
+                    <div class="spec-detail">Cat8 — máxima frecuencia</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider-thin"></div>
+
+        <!-- Estructura del cable -->
+        <h2 class="tech-header">Estructura Interna del Cable</h2>
+        <div class="content-block">
+            <div class="pt-gallery">
+                <div class="pt-gallery-item">
+                    <img src="images/cable_seccion.png" alt="Sección transversal del cable de par trenzado">
+                    <div class="pt-gallery-caption">Sección transversal — 4 pares de cobre trenzados</div>
+                </div>
+                <div class="pt-gallery-item">
+                    <img src="images/rj45.png" alt="Conector RJ-45">
+                    <div class="pt-gallery-caption">Conector RJ-45 — interfaz estándar de conexión</div>
+                </div>
+            </div>
+            <p class="body-text">Cada cable de par trenzado contiene <strong>4 pares de hilos de cobre</strong> (8 hilos en total), cada par trenzado entre sí con un paso de torsión diferente para minimizar la interferencia mutua. Los colores estándar son:</p>
+            <ul class="ui-list">
+                <li><strong>Par 1:</strong> Azul y blanco-azul</li>
+                <li><strong>Par 2:</strong> Naranja y blanco-naranja</li>
+                <li><strong>Par 3:</strong> Verde y blanco-verde</li>
+                <li><strong>Par 4:</strong> Marrón y blanco-marrón</li>
+            </ul>
+            <div class="info-box" style="border-left-color: #444; background: transparent; box-shadow: none; border: 1px solid var(--border);">
+                <p><strong>¿Por qué se trenzan?</strong> El trenzado crea un efecto de cancelación de ruido: cuando una interferencia electromagnética externa afecta a un hilo, afecta al hilo adyacente en dirección opuesta, cancelándose mutuamente. A mayor cantidad de trenzas por metro, mayor protección contra interferencias.</p>
+            </div>
+        </div>
+
+        <div class="divider-thick"></div>
+
+        <!-- UTP vs STP -->
+        <h2 class="tech-header">UTP vs STP — Variantes principales</h2>
+        <div class="content-block">
+            <div class="comparison-grid">
+                <div class="comparison-card utp-card">
+                    <h4>UTP — Sin blindaje</h4>
+                    <p class="body-text" style="font-size: 0.95rem;">Unshielded Twisted Pair. Los pares trenzados están envueltos solo en su cubierta plástica externa, sin capas metálicas adicionales de protección.</p>
+                    <ul class="ui-list">
+                        <li><strong>Costo:</strong> Más económico ($2–$5 MXN/m)</li>
+                        <li><strong>Flexibilidad:</strong> Más ligero y fácil de instalar</li>
+                        <li><strong>Uso:</strong> Oficinas, hogares, escuelas</li>
+                        <li><strong>Limitación:</strong> Susceptible en entornos con alta EMI</li>
+                    </ul>
+                </div>
+                <div class="comparison-card stp-card">
+                    <h4>STP — Con blindaje</h4>
+                    <p class="body-text" style="font-size: 0.95rem;">Shielded Twisted Pair. Cada par (o el conjunto completo) está envuelto en una lámina metálica o malla que actúa como barrera contra interferencias externas.</p>
+                    <ul class="ui-list">
+                        <li><strong>Costo:</strong> Más caro ($8–$15 MXN/m)</li>
+                        <li><strong>Protección:</strong> Excelente contra EMI y RFI</li>
+                        <li><strong>Uso:</strong> Fábricas, hospitales, data centers</li>
+                        <li><strong>Limitación:</strong> Más rígido y difícil de manejar</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider-thin"></div>
+
+        <!-- Categorías -->
+        <h2 class="tech-header">Categorías del Cable de Par Trenzado</h2>
+        <div class="content-block">
+            <div class="pt-gallery" style="margin-bottom: 24px;">
+                <div class="pt-gallery-item" style="grid-column: 1 / -1;">
+                    <img src="images/categorias_cable.png" alt="Categorías de cables de par trenzado" style="height: 280px;">
+                    <div class="pt-gallery-caption">Diferentes categorías de cable de par trenzado — de Cat5e a Cat8</div>
+                </div>
+            </div>
+            <div class="cat-table-wrapper">
+                <table class="cat-table">
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Velocidad Máx.</th>
+                            <th>Frecuencia</th>
+                            <th>Alcance</th>
+                            <th>Uso Típico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="cat-name">Cat 3</td>
+                            <td>10 Mbps</td>
+                            <td>16 MHz</td>
+                            <td>100 m</td>
+                            <td>Telefonía (obsoleto en datos)</td>
+                        </tr>
+                        <tr>
+                            <td class="cat-name">Cat 5</td>
+                            <td>100 Mbps</td>
+                            <td>100 MHz</td>
+                            <td>100 m</td>
+                            <td>Fast Ethernet (obsoleto)</td>
+                        </tr>
+                        <tr>
+                            <td class="cat-name cat-highlight">Cat 5e</td>
+                            <td class="cat-highlight">1 Gbps</td>
+                            <td>100 MHz</td>
+                            <td>100 m</td>
+                            <td>Hogares y oficinas — el más común</td>
+                        </tr>
+                        <tr>
+                            <td class="cat-name cat-highlight">Cat 6</td>
+                            <td class="cat-highlight">10 Gbps</td>
+                            <td>250 MHz</td>
+                            <td>55 m (10G) / 100 m (1G)</td>
+                            <td>Oficinas y redes empresariales</td>
+                        </tr>
+                        <tr>
+                            <td class="cat-name">Cat 6A</td>
+                            <td class="cat-highlight">10 Gbps</td>
+                            <td>500 MHz</td>
+                            <td>100 m</td>
+                            <td>Empresas y data centers</td>
+                        </tr>
+                        <tr>
+                            <td class="cat-name">Cat 7</td>
+                            <td>10 Gbps</td>
+                            <td>600 MHz</td>
+                            <td>100 m</td>
+                            <td>Centros de datos (STP)</td>
+                        </tr>
+                        <tr>
+                            <td class="cat-name">Cat 7A</td>
+                            <td>10 Gbps</td>
+                            <td>1000 MHz</td>
+                            <td>100 m</td>
+                            <td>Instalaciones de alto rendimiento</td>
+                        </tr>
+                        <tr>
+                            <td class="cat-name">Cat 8</td>
+                            <td class="cat-highlight">25–40 Gbps</td>
+                            <td>2000 MHz</td>
+                            <td>30 m</td>
+                            <td>Data centers — conexiones entre switches</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="divider-thick"></div>
+
+        <!-- ¿Para qué se usa? -->
+        <h2 class="tech-header">¿Para qué se utiliza?</h2>
+        <div class="content-block">
+            <div class="uses-grid">
+                <div class="use-card">
+                    <span class="use-icon">🏠</span>
+                    <h4>Redes domésticas</h4>
+                    <p>Conectar computadoras, consolas de videojuegos, Smart TVs y otros dispositivos al router de Internet del hogar.</p>
+                </div>
+                <div class="use-card">
+                    <span class="use-icon">🏢</span>
+                    <h4>Redes empresariales</h4>
+                    <p>Interconectar PCs, impresoras, servidores y switches en oficinas, escuelas y universidades.</p>
+                </div>
+                <div class="use-card">
+                    <span class="use-icon">📞</span>
+                    <h4>Telefonía VoIP</h4>
+                    <p>Transmitir llamadas de voz sobre IP usando la misma infraestructura de red Ethernet existente.</p>
+                </div>
+                <div class="use-card">
+                    <span class="use-icon">📹</span>
+                    <h4>Cámaras de seguridad (PoE)</h4>
+                    <p>Alimentar y transmitir video desde cámaras IP mediante un solo cable usando Power over Ethernet.</p>
+                </div>
+                <div class="use-card">
+                    <span class="use-icon">🖥️</span>
+                    <h4>Centros de datos</h4>
+                    <p>Interconectar racks de servidores, switches y sistemas de almacenamiento con cables Cat6A/Cat8.</p>
+                </div>
+                <div class="use-card">
+                    <span class="use-icon">🎮</span>
+                    <h4>Gaming competitivo</h4>
+                    <p>Conexión directa por cable para minimizar la latencia en partidas online competitivas.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider-thick"></div>
+
+        <!-- Normas de cableado -->
+        <h2 class="tech-header">Normas de Cableado — T568A y T568B</h2>
+        <div class="content-block">
+            <p class="body-text">Existen dos estándares internacionales para ordenar los hilos dentro del conector RJ-45. Ambos son válidos, pero es fundamental mantener consistencia en toda la instalación:</p>
+            <div class="wiring-img-container">
+                <img src="images/normas_t568.png" alt="Estándares T568A y T568B" class="wiring-img">
+            </div>
+            <div class="grid-cards">
+                <div class="card-corporate">
+                    <h4>Cable Directo (Straight-Through)</h4>
+                    <p class="text-secondary">Ambos extremos con la <strong>misma norma</strong> (T568B–T568B). Se usa para conectar dispositivos diferentes: PC → Switch, Switch → Router.</p>
+                </div>
+                <div class="card-corporate">
+                    <h4>Cable Cruzado (Crossover)</h4>
+                    <p class="text-secondary">Un extremo T568A y el otro T568B. Se usaba para conectar dispositivos iguales: PC → PC, Switch → Switch. Hoy los switches modernos auto-detectan (Auto-MDI/X).</p>
+                </div>
+            </div>
+            <div class="info-box" style="margin-top: 20px; border-left-color: #5c6bc0; background: rgba(92,107,192,0.06); border: 1px solid rgba(92,107,192,0.25);">
+                <p><strong>T568B es el estándar más utilizado</strong> en América y en la mayoría de instalaciones comerciales. T568A es más común en instalaciones gubernamentales y en Europa. Ambos funcionan igual de bien; lo importante es <strong>no mezclarlos</strong> en el mismo extremo.</p>
+            </div>
+        </div>
+
+        <div class="divider-thick"></div>
+
+        <!-- Video Tutorial -->
+        <div class="video-section">
+            <h3>🎬 Video Tutorial: Cómo Ponchar un Cable de Red</h3>
+            <p class="video-desc">Aprende paso a paso cómo armar tu propio cable de par trenzado con conector RJ-45.</p>
+            <div class="video-wrapper">
+                <iframe src="https://www.dailymotion.com/embed/video/x6deq68" title="Cómo hacer un cable de red RJ-45" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Herramientas y Pasos -->
+        <h2 class="tech-header">Cómo Hacer un Cable de Par Trenzado</h2>
+        <div class="content-block">
+            <h3 class="tech-sub-header">Herramientas necesarias</h3>
+            <div class="pt-gallery" style="margin-bottom: 30px;">
+                <div class="pt-gallery-item" style="grid-column: 1 / -1;">
+                    <img src="images/herramientas_ponchado.png" alt="Herramientas para ponchar cables" style="height: 260px;">
+                    <div class="pt-gallery-caption">Kit completo: ponchadora, pelacables, tester y conectores RJ-45</div>
+                </div>
+            </div>
+            <ul class="ui-list">
+                <li><strong>Ponchadora (Crimping tool):</strong> Herramienta principal para presionar los pines del conector RJ-45 contra los hilos de cobre.</li>
+                <li><strong>Pelacables:</strong> Para retirar la cubierta exterior sin dañar los hilos internos.</li>
+                <li><strong>Conectores RJ-45:</strong> Se necesitan 2 por cable (uno en cada extremo).</li>
+                <li><strong>Tester de cables:</strong> Para verificar que todos los hilos hacen contacto correctamente.</li>
+                <li><strong>Cable UTP Cat5e o Cat6:</strong> La longitud deseada más un margen extra.</li>
+            </ul>
+
+            <h3 class="tech-sub-header">Pasos para ponchar el cable</h3>
+            <div class="pt-gallery" style="margin-bottom: 24px;">
+                <div class="pt-gallery-item" style="grid-column: 1 / -1;">
+                    <img src="images/pasos_ponchado.png" alt="Pasos para ponchar un cable de red" style="height: 280px;">
+                    <div class="pt-gallery-caption">Diagrama de los 5 pasos del proceso de ponchado</div>
+                </div>
+            </div>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Cortar y pelar la cubierta</h4>
+                        <p>Con el pelacables, retira aproximadamente 2–3 cm de la cubierta plástica exterior del cable. Ten cuidado de <strong>no cortar los hilos internos</strong>; solo la cubierta externa debe removerse.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Destrenzar y separar los hilos</h4>
+                        <p>Desenrolla los 4 pares trenzados y separa los 8 hilos individualmente. Estíralos lo más recto posible para facilitar su alineación.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Ordenar según la norma T568B</h4>
+                        <p>Organiza los 8 hilos de izquierda a derecha: <strong>blanco-naranja, naranja, blanco-verde, azul, blanco-azul, verde, blanco-marrón, marrón</strong>. Verifica el orden dos veces antes de continuar.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Cortar parejo e insertar en el conector</h4>
+                        <p>Corta los hilos a una longitud uniforme (~1.2 cm) e insértalos firmemente en el conector RJ-45 con la pestaña hacia abajo. Los hilos deben llegar hasta el fondo del conector y la cubierta del cable debe entrar al menos 5 mm dentro del conector.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4>Ponchar con la crimping tool</h4>
+                        <p>Inserta el conector en la ranura RJ-45 de la ponchadora y presiona con fuerza hasta escuchar un "click". Repite el proceso en el otro extremo del cable. Finalmente, <strong>prueba el cable con el tester</strong> para asegurar que los 8 hilos tienen continuidad.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="info-box" style="border-left-color: #66bb6a; background: rgba(102,187,106,0.06); border: 1px solid rgba(102,187,106,0.25);">
+                <p><strong>Consejo profesional:</strong> Si el tester muestra que algún par no tiene continuidad o está cruzado, corta el conector y repite el proceso. Un mal ponchado puede causar pérdida de paquetes, velocidades reducidas o desconexiones intermitentes.</p>
+            </div>
+        </div>
+
+        <div class="divider-thick"></div>
+
+        <!-- Ventajas y Desventajas -->
+        <h2 class="tech-header">Ventajas y Desventajas</h2>
+        <div class="content-block">
+            <div class="grid-cards">
+                <div class="card-corporate">
+                    <h4>✅ Ventajas</h4>
+                    <ul class="ui-list">
+                        <li>Económico y fácil de conseguir en todo el mundo.</li>
+                        <li>Instalación simple sin equipos especializados costosos.</li>
+                        <li>Compatible con miles de dispositivos (Ethernet universal).</li>
+                        <li>Soporta Power over Ethernet (PoE) para alimentar dispositivos.</li>
+                        <li>Velocidades de hasta 40 Gbps en categorías altas.</li>
+                    </ul>
+                </div>
+                <div class="card-corporate">
+                    <h4>⚠️ Desventajas</h4>
+                    <ul class="ui-list">
+                        <li>Distancia limitada a 100 metros por segmento.</li>
+                        <li>Susceptible a interferencias EMI (especialmente UTP).</li>
+                        <li>Velocidad inferior a la fibra óptica.</li>
+                        <li>Degradación de señal en distancias largas.</li>
+                        <li>Necesita protección física en exteriores.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider-thin"></div>
+
+        <!-- Dato final -->
+        <div class="content-block">
+            <div class="info-box" style="border-left-color: #5c6bc0; background: rgba(92,107,192,0.06); border: 1px solid rgba(92,107,192,0.25);">
+                <p><strong>Dato interesante:</strong> Alexander Graham Bell patentó el concepto de trenzar cables en 1881 para reducir la interferencia en líneas telefónicas. Más de 140 años después, el mismo principio sigue siendo la base de las redes Ethernet que conectan al mundo.</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            document.getElementById('progressFill').style.width = progress + '%';
+        });
+    </script>
+
+</body>
+</html>
